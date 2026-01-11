@@ -5,34 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is the home page for the course WDD231">
     <meta name="Author" content="Abel J. Nonato Avalos || nonatoDev">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
     <title>Course Home Page WDD231</title>
 </head>
 <body>
     <header>
-        <img src="" alt="">
-        <span>Abel Jesus Nonato Avalos</span>
-        <nav>
+        <div class="brand">
+            <img src="" alt="">
+            <span>Abel Jesus Nonato Avalos</span>
+        </div>
+        <button id="menuToggle" aria-label="Toggle navigation">
+            <span id="menuIcon">&#9776;</span>
+        </button>
+        <nav id="mainNav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Chamber</a></li>
-                <li><a href="">Final</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Home</h1>
-        <section>
-            <h2>About me</h2>
-        </section>
-        <section>
-            <h2>Student Photo</h2>
-        </section>
-        <section>
-            <h2>Web Certificate Courses</h2>
-        </section>
+        <h1 id="pageTitle">Home</h1>
+        <div class="grid-container">
+            <section class="card" id="about-me">
+                <h2>About me</h2>
+                <div id="about-content"></div>
+            </section>
+            <section class="card" id="student-photo">
+                <h2>Student Photo</h2>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 1025px)">
+                        <img src="" alt="Abel Nonato">
+                    </picture>
+                </figure>
+            </section>
+            <section id="course-work" class="card">
+                <h2>Web Certificate Courses</h2>
+                <div class="filter-buttons">
+                    <button id="btn-all" class="btn active">All</button>
+                    <button id="btn-cse" class="btn">CSE</button>
+                    <button id="btn-wdd" class="btn">WDD</button>
+                </div>
+                <div id="course-display"></div>
+                <div id="course-summary">
+                    <p>Total Credits: <span id="total-credits">0</span></p>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
-        
+        <div class="social-icons">
+            <a href="#" target="_blank" rel="noopener">
+                <img src="" alt="LinkedIn">
+            </a>
+            <a href="" target="_blank" rel="noopener">
+                <img src="" alt="GitHub">
+            </a>
+            <a href="" target="_blank" rel="noopener">
+                <img src="" alt="X">
+            </a>
+        </div>
+        <p id="copyrightInfo"></p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
