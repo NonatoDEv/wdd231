@@ -129,7 +129,31 @@ main{
     font-family: var(--font-main);
 }
 #course-summary {
+    margin-top: 2rem;
     padding: 1.5rem;
-    font-size: 0.95rem;
-    color: var(--dark);
+    background-color: var(--white);
+    border-top: 3px solid var(--red);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-radius: 8px;
+}
+#course-summary p {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#total-credits {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--red);
+    background-color: var(--sky-blue);
+    padding: 5px 15px;
+    border-radius: 50px;
+    min-width: 40px;
+    display: inline-block;
 }
