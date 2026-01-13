@@ -15,28 +15,22 @@ function renderAbout() {
         </ul>
     `;
 }
-
 document.querySelector('#btn-all').addEventListener('click', (e) => {
     setActiveButton(e.target);
     displayCourses(courses);
 });
-
 document.querySelector('#btn-cse').addEventListener('click', (e) => {
     setActiveButton(e.target);
     displayCourses(courses.filter(c => c.subject === 'CSE'));
 });
-
 document.querySelector('#btn-wdd').addEventListener('click', (e) => {
     setActiveButton(e.target);
     displayCourses(courses.filter(c => c.subject === 'WDD'));
 });
-
-
 function setActiveButton(button) {
     document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
 }
-
 function displayCourses(filteredCourses) {
     courseDisplay.innerHTML = "";
     
@@ -56,6 +50,5 @@ const total = filteredCourses.reduce((sum, course) => {
 }, 0)
 totalCreditsSpan.textContent = total;
 }
-
 renderAbout();
 displayCourses(courses);
