@@ -196,7 +196,7 @@ main {
         height: 100vh;
     }
     main {
-        height: calc(100% - 28vh);
+        height: calc(100% - 35vh);
         display: flex;
         flex-direction: column;
         align-items: center;
