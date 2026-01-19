@@ -7,12 +7,41 @@
     <meta property="og:description" content="Connecting Businesses in Chincha">
     <meta property="og:image" content="images/chincha-valley.webp">
     <meta property="og:url" content="https://nonatodev.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 1025px)">
     <title>Chincha Chamber of Commerce</title>
+    <script defer src="scripts/header.js"></script>
+    <script defer src="scripts/directory.js"></script>
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <div class="brand">
+            <img src="images/chincha-logo.webp" alt="Logo of Chincha Chamber of Commerce showing a stylized afro-culture from chincha">
+            <span>Chincha Chamber of Commerce</span>
+        </div>
+        <button id="menuToggle" aria-label="Toggle navigation">
+            <span id="menuIcon">&#9776;</span>
+        </button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="directoryControls">
+            <button id="gridView">Vista Galería</button>
+            <button id="listView">Vista Lista</button>
+        </div>
+
+        <div id="membersContainer" class="gridLayout">
+            </div>
+    </main>
+    <footer><div id="footerContent"></div></footer>
 </body>
 </html>

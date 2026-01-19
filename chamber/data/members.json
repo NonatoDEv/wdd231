@@ -1,0 +1,40 @@
+{
+  "members": [
+    {
+      "name": "Ecopacking",
+      "address": "Panamericana Norte Km. 503, Chao, Virú",
+      "phone": "+51 (044) 612140",
+      "website": "https://www.ecopacking.com.pe",
+      "image": "ecopacking.webp",
+      "membership": 3,
+      "tagline": "Soluciones de empaque sustentables para la agroexportación."
+    },
+    {
+      "name": "Packing El Carmen",
+      "address": "Km. 202 Panamericana Sur, Chincha Baja",
+      "phone": "+51 (056) 271212",
+      "website": "https://www.packingelcarmen.com",
+      "image": "PDC.webp",
+      "membership": 3,
+      "tagline": "Líderes en procesamiento de cítricos y paltas de exportación."
+    },
+    {
+      "name": "Procesadora Larán (Prolan)",
+      "address": "Fundo Santa Cruz s/n, Alto Larán",
+      "phone": "+51 (056) 271515",
+      "website": "https://www.prolan.com.pe",
+      "image": "prolan.webp",
+      "membership": 3,
+      "tagline": "Excelencia en servicios de empaque y frío agroindustrial."
+    },
+    {
+      "name": "Corporación Frutícola de Chincha (Fruchincha)",
+      "address": "Carretera Sunampe Km 2.5",
+      "phone": "+51 (056) 267320",
+      "website": "https://cchc.org.pe",
+      "image": "fruchincha.webp",
+      "membership": 3,
+      "tagline": "La fuerza exportadora de los valles chinchanos."
+    }
+  ]
+}

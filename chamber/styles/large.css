@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: #1B365D;
+    --secondary-color: #D4AF37;
+    --accent-color: #F4F4F4;
+    --white: #ffffff;
+    --black: #333333;
+    --error-red: #A50021;        
+    --heading-font: 'Roboto', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 10%;
+}
+.brand img {
+    width: 80px;
+}
+#menuToggle {
+    display: none;
+}
+#mainNav ul {
+    display: flex;
+    gap: 2rem;
+}
+#mainNav li a {
+    border-bottom: none;
+    padding: 0.5rem 0;
+}
+#mainNav a:hover {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--secondary-color);
+}
