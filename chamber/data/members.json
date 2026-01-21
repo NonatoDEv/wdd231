@@ -22,7 +22,7 @@
       "name": "Procesadora Larán (Prolan)",
       "address": "Fundo Santa Cruz s/n, Alto Larán",
       "phone": "+51 (056) 271515",
-      "website": "https://www.prolan.com.pe",
+      "website": "https://www.lacalera.com.pe/agroprolan",
       "image": "prolan.webp",
       "membership": 3,
       "tagline": "Excelencia en servicios de empaque y frío agroindustrial."
@@ -31,10 +31,37 @@
       "name": "Corporación Frutícola de Chincha (Fruchincha)",
       "address": "Carretera Sunampe Km 2.5",
       "phone": "+51 (056) 267320",
-      "website": "https://cchc.org.pe",
+      "website": "https://fruchincha.com.pe/",
       "image": "fruchincha.webp",
       "membership": 3,
       "tagline": "La fuerza exportadora de los valles chinchanos."
-    }
+    },
+    {
+      "name": "Colegio San Vicente de Paul",
+      "address": "Calle Maurtua N° 390, Chincha Alta",
+      "phone": "+51 (056) 264248",
+      "website": "https://svp.edu.pe/index.php",
+      "image": "SVP.webp",
+      "membership": 2,
+      "tagline": "Forjando una juventud de exito."
+    },
+    {
+      "name": "El Batan",
+      "address": "Panamericana Sur 791 Km. 197.5 (Al costado del Súper Grifo Chincha), Chincha Alta",
+      "phone": "+51 981 495314",
+      "website": "https://batanchincha.com/",
+      "image": "el-batan.webp",
+      "membership": 2,
+      "tagline": "Disfrutar de un suculento almuerzo o una deliciosa cena con calidez y encanto."
+    },
+    {
+      "name": "Baby Lucy",
+      "address": "Pasaje Oeste puesto 2-b, Mercado de abastos, Chincha Alta",
+      "phone": "+51 922513481",
+      "website": "https://nonatodev.github.io/wdd131/project/site.html",
+      "image": "baby-lucy.webp",
+      "membership": 2,
+      "tagline": "Tienda de ropa y accesorios para bebés y niños."
+    } 
   ]
 }
