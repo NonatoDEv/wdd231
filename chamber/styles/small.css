@@ -74,3 +74,85 @@ header {
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--secondary-color);
 }
+#membersContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.memberCard {
+    background-color: var(--white);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.memberCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.memberLogo {
+    width: 100%;
+    max-width: 180px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+.memberCard:hover .memberLogo {
+    filter: grayscale(0%);
+}
+.memberName {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+.memberAddress, .memberPhone {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: #555;
+}
+.tagline {
+    font-style: italic;
+    color: var(--black);
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.memberWebsite {
+    display: inline-block;
+    margin-top: auto;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.memberWebsite:hover {
+    background-color: #264b82;
+}
+.goldMember {
+    border: 2px solid var(--secondary-color);
+    position: relative;
+    background: linear-gradient(to bottom, #ffffff, #fffef5);
+}
+.goldMember::before {
+    content: "Gold Member";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
