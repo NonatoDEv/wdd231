@@ -39,3 +39,15 @@ const displayMembers = (members) => {
 }
 
 getMembersData();
+
+const gridButton = document.querySelector('#gridView');
+const listButton = document.querySelector('#listView');
+const display = document.querySelector('#membersContainer');
+
+gridButton.addEventListener('click',() => {
+    display.classList.remove('list-view');
+});
+
+listButton.addEventListener('click',()=>{
+    display.classList.add('list-view');
+});
