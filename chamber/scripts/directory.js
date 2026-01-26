@@ -40,14 +40,24 @@ const displayMembers = (members) => {
 
 getMembersData();
 
-const gridButton = document.querySelector('#gridView');
-const listButton = document.querySelector('#listView');
+const gridBtn = document.querySelector('#gridBtn');
+const listBtn = document.querySelector('#listBtn');
 const display = document.querySelector('#membersContainer');
 
-gridButton.addEventListener('click',() => {
+gridBtn.classList.add('active');
+
+gridBtn.addEventListener('click', () => {
+    display.classList.add('gridLayout');
     display.classList.remove('list-view');
+    
+    gridBtn.classList.add('active');
+    listBtn.classList.remove('active');
 });
 
-listButton.addEventListener('click',()=>{
+listBtn.addEventListener('click', () => {
     display.classList.add('list-view');
+    display.classList.remove('gridLayout');
+    
+    listBtn.classList.add('active');
+    gridBtn.classList.remove('active');
 });
