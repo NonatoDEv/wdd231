@@ -38,7 +38,7 @@ function displaySpotlights(members, container) {
                     <div class="spotlight-info">
                         <p><strong>EMAIL:</strong> ${member.email}</p>
                         <p><strong>PHONE:</strong> ${member.phone}</p>
-                        <p><strong>URL:</strong> <a href="${member.website}" target="_blank">${member.website.replace('https://', '')}</a></p>
+                        <p><strong>WEBSITE:</strong> <a href="${member.website}" target="_blank">${member.website.replace('https://', '')}</a></p>
                     </div>
                 </div>
             </div>
