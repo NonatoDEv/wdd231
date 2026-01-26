@@ -3,7 +3,7 @@ const footerContainer = document.querySelector('#footerContent');
 const footerHTML = `
     <div class="footer-grid">
         <div class="footer-brand">
-            <img src="images/chincha-logo.webp" alt="Logo of the Chincha's Chamber" class="footer-logo">
+            <img src="images/chincha-logo.webp" alt="Logo of the Chincha's Chamber"  width="200" loading="lazy" class="footer-logo">
             <p>Fomentando el comercio en la provincia de Chincha.</p>
         </div>
         <div class="footer-social">

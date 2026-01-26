@@ -26,7 +26,7 @@ const displayMembers = (members) => {
         }
 
         card.innerHTML = `
-            <img src="images/${member.image}" alt="Logo of ${member.name}" loading="lazy" class="memberLogo"/>
+            <img src="images/${member.image}" width="200" height="150" alt="Logo of ${member.name}" loading="lazy" class="memberLogo"/>
             <h2 class="memberName">${member.name}</h2>
             <p class="memberAddress">${member.address}</p>
             <p class="memberPhone">Phone: ${member.phone}</p>
