@@ -78,6 +78,7 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
     border-left: 4px solid var(--secondary-color);
 }
+/*MAIN STYLE*/
 h1 {
     text-align: center;
     margin: 1.5rem 0;
@@ -104,7 +105,7 @@ h1 {
 }
 .directoryControls button.active {
     background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    border-color: var(--primary-color);
     color: var(--primary-color);
     box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
 }
@@ -144,7 +145,7 @@ h1 {
     height: 120px;
     object-fit: contain;
     margin-bottom: 1.5rem;
-    filter: grayscale(20%); /* Tu toque personal */
+    filter: grayscale(20%);
     transition: filter 0.3s ease;
 }
 
@@ -236,8 +237,6 @@ footer {
         padding: 0.5rem 0;
         border-top: none;
     }
-
-    
     #mainNav li a:hover {
         background-color: transparent;
         color: var(--secondary-color);
