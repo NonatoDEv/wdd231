@@ -75,13 +75,143 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
     border-left: 4px solid var(--secondary-color);
 }
+/*MAIN CONTENT STYLES*/
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.info-card {
+    background-color: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    min-height: 250px;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffffffcc;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+/*Weather*/
+.info-card {
+    background-color: var(--accent-color); /* #F4F4F4 */
+    border: 1px solid rgba(27, 54, 93, 0.2); /* Borde sutil basado en el Primary */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabecera de la tarjeta con tu azul institucional */
+.info-card h2 {
+    background-color: var(--primary-color); /* #1B365D */
+    color: var(--white);
+    padding: 1rem;
+    margin: 0;
+    font-family: var(--heading-font); /* Roboto */
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Contenido de Clima y Eventos */
+#weather-data, #forecast-content, #events-data {
+    padding: 1.5rem;
+}
+
+/* Resaltado de Temperatura con Dorado */
+.current-weather-info strong {
+    color: var(--secondary-color); /* #D4AF37 */
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+/* --- SPOTLIGHT SECTION --- */
+.spotlights {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spotlights h2 {
+    font-family: var(--heading-font); /* Roboto */
+    color: var(--primary-color); /* #1B365D */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.spotlight-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tarjeta de Socio */
+.spotlight-card {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+/* Distinción para socios Gold: Borde Dorado */
+.spotlight-card.gold {
+    border-top: 5px solid var(--secondary-color); /* #D4AF37 */
+}
+
+.spotlight-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.spotlight-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.spotlight-body img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.spotlight-info p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    line-height: 1.4;
+}
 /* FOOTER STYLES */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 2rem 1rem;
 }
-
 .footer-grid {
     display: flex;
     flex-direction: column;
@@ -89,21 +219,89 @@ footer {
     gap: 1.5rem;
     text-align: center;
 }
-
 .footer-logo {
     max-width: 140px;
     height: auto;
 }
-
 .social-icons {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
-
 .icon {
     width: 30px;
     height: 30px;
     stroke: var(--secondary-color);
     transition: transform 0.3s;
+}
+/*LARGE SCREEN STYLES*/
+@media screen and (min-width:1025px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 10%;
+    }
+    .brand img { 
+        width: 80px;
+    }
+    #menuToggle { 
+        display: none;
+    }
+    #mainNav ul {
+        display: flex;
+        gap: 2rem;
+        margin-top: 0;
+    }
+
+    #mainNav li a {
+        padding: 0.5rem 0;
+        border-top: none;
+    }
+    #mainNav li a:hover {
+        background-color: transparent;
+        color: var(--secondary-color);
+        box-shadow: 0 2px 0 var(--secondary-color);
+    }
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .spotlight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    /* Si quieres que el Forecast sea una tarjeta independiente */
+    .forecast-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(27, 54, 93, 0.1);
+    }
+
+    /* Wayfinding: Resaltamos el día con el azul primario */
+    .forecast-item span {
+        font-weight: bold;
+        color: var(--primary-color);
+    }    
+    .footer-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .footer-brand {
+        flex: 1;
+    }
+    .footer-social {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-legal {
+        flex: 1;
+        text-align: right;
+    }
 }

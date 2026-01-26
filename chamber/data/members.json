@@ -15,7 +15,7 @@
       "phone": "+51 (056) 271212",
       "website": "https://www.packingdelcarmen.com",
       "image": "PDC.webp",
-      "membership": 3,
+      "membership": 2,
       "tagline": "Líderes en procesamiento de cítricos y paltas de exportación."
     },
     {
@@ -24,7 +24,7 @@
       "phone": "+51 (056) 271515",
       "website": "https://www.lacalera.com.pe/agroprolan",
       "image": "prolan.webp",
-      "membership": 3,
+      "membership": 1,
       "tagline": "Excelencia en servicios de empaque y frío agroindustrial."
     },
     {
@@ -33,7 +33,7 @@
       "phone": "+51 (056) 267320",
       "website": "https://fruchincha.com.pe/",
       "image": "fruchincha.webp",
-      "membership": 3,
+      "membership": 1,
       "tagline": "La fuerza exportadora de los valles chinchanos."
     },
     {
@@ -42,7 +42,7 @@
       "phone": "+51 (056) 264248",
       "website": "https://svp.edu.pe/index.php",
       "image": "SVP.webp",
-      "membership": 2,
+      "membership": 3,
       "tagline": "Forjando una juventud de exito."
     },
     {
@@ -60,7 +60,7 @@
       "phone": "+51 922513481",
       "website": "https://nonatodev.github.io/wdd131/project/site.html",
       "image": "baby-lucy.webp",
-      "membership": 2,
+      "membership": 3,
       "tagline": "Tienda de ropa y accesorios para bebés y niños."
     } 
   ]
