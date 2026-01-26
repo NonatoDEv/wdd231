@@ -20,7 +20,7 @@ const footerHTML = `
 
         <div class="footer-legal">
             <p>&copy; ${new Date().getFullYear()} | Powered by Abel J. Nonato | Chincha, Perú</p>
-            <p id="lastModified">Modified: ${document.lastModified}</p>
+            <p id="lastModified"> last Modified: ${document.lastModified}</p>
         </div>
     </div>
 `;
