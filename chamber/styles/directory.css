@@ -78,6 +78,10 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
     border-left: 4px solid var(--secondary-color);
 }
+h1 {
+    text-align: center;
+    margin: 1.5rem 0;
+}
 .directoryControls {
     display: flex;
     justify-content: center;
