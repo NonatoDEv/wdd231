@@ -50,7 +50,6 @@ function displayCurrentWeather(data) {
     
     container.innerHTML = `
         <div class="weather-card">
-            <h3>Current Weather</h3>
             <div class="weather-content">
                 <img src="${iconUrl}" alt="${desc}" class="weather-icon">
                 <div class="weather-stats">
