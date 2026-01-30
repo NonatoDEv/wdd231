@@ -114,37 +114,99 @@ header {
 }
 /*Weather*/
 .info-card {
-    background-color: var(--accent-color); /* #F4F4F4 */
-    border: 1px solid rgba(27, 54, 93, 0.2); /* Borde sutil basado en el Primary */
+    background-color: var(--accent-color);
+    border: 1px solid rgba(27, 54, 93, 0.1);
     border-radius: 8px;
     margin-bottom: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
-
-/* Cabecera de la tarjeta con tu azul institucional */
 .info-card h2 {
-    background-color: var(--primary-color); /* #1B365D */
+    background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem;
     margin: 0;
-    font-family: var(--heading-font); /* Roboto */
-    font-size: 1.2rem;
-    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-
-/* Contenido de Clima y Eventos */
-#weather-data, #forecast-content, #events-data {
+.weather-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1.5rem;
+    gap: 1rem;
 }
-
-/* Resaltado de Temperatura con Dorado */
-.current-weather-info strong {
-    color: var(--secondary-color); /* #D4AF37 */
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 0.5rem;
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+}
+.weather-stats {
+    text-align: center;
+    font-family: var(--body-font);
+    color: var(--black);
+}
+.main-temp {
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+.description {
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 0.9rem;
+    text-align: left;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 10px;
+}
+#forecast-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 1.5rem;
+    background-color: var(--white);
+}
+.forecast-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--accent-color);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+.forecast-item:hover {
+    transform: translateX(5px);
+}
+.forecast-day {
+    font-family: var(--heading-font);
+    font-weight: bold;
+    color: var(--primary-color);
+    min-width: 100px;
+}
+.forecast-mini-icon {
+    width: 40px;
+    height: 40px;
+}
+.forecast-temp {
+    font-family: var(--body-font);
+    color: var(--black);
 }
 /* --- SPOTLIGHT SECTION --- */
 .spotlights {
@@ -152,21 +214,17 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .spotlights h2 {
-    font-family: var(--heading-font); /* Roboto */
-    color: var(--primary-color); /* #1B365D */
+    font-family: var(--heading-font);
+    color: var(--primary-color);
     text-align: center;
     margin-bottom: 1.5rem;
 }
-
 .spotlight-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
-/* Tarjeta de Socio */
 .spotlight-card {
     background-color: var(--white);
     border: 1px solid #ddd;
@@ -175,18 +233,14 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
 }
-
-/* Distinción para socios Gold: Borde Dorado */
 .spotlight-card.gold {
-    border-top: 5px solid var(--secondary-color); /* #D4AF37 */
+    border-top: 5px solid var(--secondary-color);
 }
-
 .spotlight-header h3 {
     margin: 0;
     color: var(--primary-color);
     font-size: 1.4rem;
 }
-
 .spotlight-body {
     display: flex;
     flex-direction: column;
@@ -194,13 +248,11 @@ header {
     gap: 15px;
     margin-top: 1rem;
 }
-
 .spotlight-body img {
     max-width: 120px;
     height: auto;
     border-radius: 5px;
 }
-
 .spotlight-info p {
     font-size: 0.9rem;
     margin: 5px 0;
@@ -265,23 +317,33 @@ footer {
     .home-grid {
         grid-template-columns: 1fr 1fr;
     }
+    .weather-content {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+    .weather-stats {
+        text-align: left;
+    }
+    #forecast-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .forecast-item {
+        flex-direction: column;
+        text-align: center;
+        border-left: none;
+        border-bottom: 4px solid var(--secondary-color);
+        padding: 20px 10px;
+    }
+
+    .forecast-item:hover {
+        transform: translateY(-5px);
+    }
     .spotlight-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-    }
-    /* Si quieres que el Forecast sea una tarjeta independiente */
-    .forecast-item {
-        display: flex;
-        justify-content: space-between;
-        padding: 12px 0;
-        border-bottom: 1px solid rgba(27, 54, 93, 0.1);
-    }
-
-    /* Wayfinding: Resaltamos el día con el azul primario */
-    .forecast-item span {
-        font-weight: bold;
-        color: var(--primary-color);
     }    
     .footer-grid {
         flex-direction: row;

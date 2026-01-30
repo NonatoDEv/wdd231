@@ -11,8 +11,6 @@ export async function initWeather() {
             fetch(currentUrl),
             fetch(forecastUrl)
         ]);
-
-        // Verificamos si la API nos dio permiso (status 200)
         if (!currentRes.ok || !forecastRes.ok) {
             throw new Error(`API status: ${currentRes.status}`);
         }
@@ -33,15 +31,38 @@ function displayCurrentWeather(data) {
     const container = document.querySelector('#weather-data');
     if (!container) return;
 
-    // Usamos Optional Chaining (?.) para evitar errores de "undefined"
     const temp = data.main?.temp?.toFixed(0) ?? "N/A";
     const desc = data.weather?.[0]?.description ?? "No data";
-    const hum = data.main?.humidity ?? "N/A";
+    const high = data.main?.temp_max?.toFixed(0) ?? "N/A";
+    const low = data.main?.temp_min?.toFixed(0) ?? "N/A";
+    const humidity = data.main?.humidity ?? "N/A";
 
+    const iconCode = data.weather?.[0]?.icon;
+    const iconUrl = iconCode ? `https://openweathermap.org/img/wn/${iconCode}@2x.png` : "";
+
+    const formatTime = (unix) => {
+        if (!unix) return "N/A";
+        let date = new Date(unix * 1000);
+        return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    };
+    const sunrise = formatTime(data.sys?.sunrise);
+    const sunset = formatTime(data.sys?.sunset);
+    
     container.innerHTML = `
-        <div class="current-weather-info">
-            <p><strong>${temp}°C</strong> - ${desc}</p>
-            <p>Humidity: ${hum}%</p>
+        <div class="weather-card">
+            <h3>Current Weather</h3>
+            <div class="weather-content">
+                <img src="${iconUrl}" alt="${desc}" class="weather-icon">
+                <div class="weather-stats">
+                    <p class="main-temp"><strong>${temp}°C</strong></p>
+                    <p class="description">${desc}</p>
+                    <p>High: ${high}°</p>
+                    <p>Low: ${low}°</p>
+                    <p>Humidity: ${humidity}%</p>
+                    <p>Sunrise: ${sunrise}</p>
+                    <p>Sunset: ${sunset}</p>
+                </div>
+            </div>
         </div>
     `;
 }
@@ -50,14 +71,19 @@ function displayForecast(data) {
     const container = document.querySelector('#forecast-content');
     if (!container) return;
 
-    
     const forecastList = data.list.filter((item, index) => index % 8 === 0).slice(0, 3);
 
     container.innerHTML = forecastList.map(day => {
         const date = new Date(day.dt * 1000).toLocaleDateString('en-US', { weekday: 'long' });
+        const iconCode = day.weather[0].icon;
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+        const temp = day.main.temp.toFixed(0);
+
         return `
             <div class="forecast-item">
-                <p>${date}: <strong>${day.main.temp.toFixed(0)}°C</strong></p>
+                <span class="forecast-day">${date}</span>
+                <img src="${iconUrl}" alt="${day.weather[0].description}" class="forecast-mini-icon">
+                <span class="forecast-temp"><strong>${temp}°C</strong></span>
             </div>
         `;
     }).join('');
@@ -73,3 +99,4 @@ function handleWeatherError() {
     displayCurrentWeather(mockCurrent);
     displayForecast(mockForecast);
 }
+
