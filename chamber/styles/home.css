@@ -154,6 +154,12 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+.info-card a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    display: block;
+    color: var(--primary-color);
+}
 .weather-content {
     display: flex;
     flex-direction: column;
