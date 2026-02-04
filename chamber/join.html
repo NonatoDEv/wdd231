@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join to Chincha's Chamber commerce</title>
+    <meta name="author" content="Abel Jesus Nonato Avalos">
+    <meta name="description" content="Welcome to the Chincha Chamber of Commerce, connecting businesses in Chincha. Join us to grow your network and discover local opportunities.">
+    <meta property="og:title" content="Chincha Chamber of Commerce">
+    <meta property="og:description" content="Experience handcrafted web development in Chincha. We build high-performance digital solutions to empower local businesses. Connect with us today!">
+    <meta property="og:image" content="https://nonatodev.github.io/wdd231/chamber/images/chincha-valley.webp">
+    <meta property="og:url" content="https://nonatodev.github.io/wdd231/chamber/index.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>Join to Chincha Chamber of commerce</title>
+    <script src="scripts/header.js" type="module"></script>
+    <script src="scripts/home.js" type="module"></script>
+    <script src="scripts/footer.js" type="module"></script>
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
@@ -29,35 +47,35 @@
             <form method="get" action="thankyou.html" class="join-form">
                 <fieldset>
                     <legend>Información del Solicitante</legend>
-                    <label>Nombre:
+                    <label> First Name:
                         <input type="text" name="fname" required title="First Name" autocomplete="given-name">
                     </label>
-                    <label>Apellido:
+                    <label>Last Name:
                         <input type="text" name="lname" required title="Last Name" autocomplete="family-name">
                     </label>
-                    <label>Cargo:
+                    <label>Position:
                         <input type="text" name="title" title="Mínimo 7 caracteres" 
                    autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
                     </label>
                 </fieldset>
                 <fieldset>
-                    <legend>Datos de la Organización</legend>
-                    <label>Correo Electrónico:
+                    <legend>About to the organization</legend>
+                    <label>Email:
                         <input type="email" name="email" required title="Email" 
                    autocomplete="email" placeholder="ejemplo@correo.com">
                     </label>
-                    <label>Teléfono:
+                    <label>Telephone:
                         <input type="tel" name="phone" required title="Celular" autocomplete="tel">
                     </label>
-                    <label>Nombre de la Empresa:
+                    <label>Organization Name:
                         <input type="text" name="organization" required title="Empresa" autocomplete="organization">
                     </label>
                 </fieldset>
                 <fieldset>
-                    <legend>Nivel de Membresía</legend>
-                    <label>Selecciona tu nivel:
+                    <legend></legend>
+                    <label>Choose Membership Level:
                     <select name="membership" required>
-                        <option value="" disabled selected>Elegir...</option>
+                        <option value="" disabled selected>Choose one... </option>
                         <option value="np">NP Membership</option>
                         <option value="bronze">Bronze Membership</option>
                         <option value="silver">Silver Membership</option>
@@ -66,10 +84,10 @@
                     </label>
                 </fieldset>
                 <input type="hidden" name="timestamp" id="timestamp">
-                <button type="submit">Unirse a la Cámara</button>
+                <button type="submit">Join to chamber commerce</button>
             </form>
         </section>
     </main>
-    <footer></footer>
+    <footer><div id="footerContent"></div></footer>
 </body>
 </html>
