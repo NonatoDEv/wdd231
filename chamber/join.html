@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join to Chincha's Chamber commerce</title>
+</head>
+<body>
+    <header>
+         <div class="brand">
+            <img src="images/chincha-logo.webp" alt="Logo of Chincha Chamber of Commerce showing a stylized afro-culture from chincha">
+            <span>Chincha Chamber of Commerce</span>
+        </div>
+        <button id="menuToggle" aria-label="Toggle navigation">
+            <span id="menuIcon">&#9776;</span>
+        </button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="join-container">
+            <h1></h1>
+            <form method="get" action="thankyou.html" class="join-form">
+                <fieldset>
+                    <legend>Información del Solicitante</legend>
+                    <label>Nombre:
+                        <input type="text" name="fname" required title="First Name" autocomplete="given-name">
+                    </label>
+                    <label>Apellido:
+                        <input type="text" name="lname" required title="Last Name" autocomplete="family-name">
+                    </label>
+                    <label>Cargo:
+                        <input type="text" name="title" title="Mínimo 7 caracteres" 
+                   autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos de la Organización</legend>
+                    <label>Correo Electrónico:
+                        <input type="email" name="email" required title="Email" 
+                   autocomplete="email" placeholder="ejemplo@correo.com">
+                    </label>
+                    <label>Teléfono:
+                        <input type="tel" name="phone" required title="Celular" autocomplete="tel">
+                    </label>
+                    <label>Nombre de la Empresa:
+                        <input type="text" name="organization" required title="Empresa" autocomplete="organization">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Nivel de Membresía</legend>
+                    <label>Selecciona tu nivel:
+                    <select name="membership" required>
+                        <option value="" disabled selected>Elegir...</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                    </label>
+                </fieldset>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <button type="submit">Unirse a la Cámara</button>
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
