@@ -16,10 +16,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/join.css">
     <title>Join to Chincha Chamber of commerce</title>
     <script src="scripts/header.js" type="module"></script>
-    <script src="scripts/home.js" type="module"></script>
+    <script src="scripts/" type="module"></script>
     <script src="scripts/footer.js" type="module"></script>
     <link rel="icon" href="images/favicon.ico">
 </head>
@@ -42,9 +42,9 @@
         </nav>
     </header>
     <main>
-        <section class="join-container">
-            <h1></h1>
-            <div>
+        <section class="joinContainer">
+            <h1>Join</h1>
+            <div class="joinLayout">
             <form method="get" action="thankyou.html" class="joinForm">
                 <fieldset class="joinFieldset">
                     <legend class="joinLegend">Information</legend>
@@ -63,18 +63,22 @@
                     <legend class="joinLegend">About to the organization</legend>
                     <label class="joinLabel">Email:
                         <input type="email" name="email" required title="Email" 
-                   autocomplete="email" placeholder="ejemplo@correo.com">
+                   autocomplete="email" placeholder="example@correo.com">
                     </label>
                     <label class="joinLabel">Telephone:
-                        <input type="tel" name="phone" required title="Celular" autocomplete="tel">
+                        <input type="tel" name="phone" required title="Phone number" autocomplete="phone">
                     </label>
                     <label class="joinLabel">Organization Name:
-                        <input type="text" name="organization" required title="Empresa" autocomplete="organization">
+                        <input type="text" name="organization" required title="businesses" autocomplete="organization">
+                    </label>
+                    <label class="joinLabel">
+                    Businesses description
+                        <textarea name="description" class="joinTextArea"></textarea>
                     </label>
                 </fieldset>
-                <fieldset>
-                    <legend></legend>
-                    <label>Choose Membership Level:
+                <fieldset class="joinFieldset">
+                    <legend class="joinLegend"></legend>
+                    <label class="joinLabel">Choose Membership Level:
                     <select name="membership" required>
                         <option value="" disabled selected>Choose one... </option>
                         <option value="np">NP Membership</option>
@@ -87,6 +91,24 @@
                 <input type="hidden" name="timestamp" id="timestamp">
                 <button type="submit">Join to chamber commerce</button>
             </form>
+            <aside class="membershipCards">
+            <div class="card-anim-fade" id="card-np">
+                <h3>Non-Profit</h3>
+                <button type="button" class="openModal" data-target="mod-np">Learn More</button>
+            </div>
+            <div class="card-anim-fade" id="cardBronze">
+                <h3>Bronze</h3>
+                <button type="button" class="openModal" data-target="mod-bronze">Learn More</button>
+            </div>
+            <div class="card-anim-fade" id="cardSilver">
+                <h3>Silver</h3>
+                <button type="button" class="openModal" data-target="mod-silver">Learn More</button>
+            </div>
+            <div class="card-anim-fade" id="cardGold">
+                <h3>Gold</h3>
+                <button type="button" class="openModal" data-target="mod-gold">Learn More</button>
+            </div>
+            </aside>
             </div>
         </section>
     </main>
