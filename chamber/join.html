@@ -45,30 +45,30 @@
         <section class="join-container">
             <h1></h1>
             <div>
-            <form method="get" action="thankyou.html" class="join-form">
-                <fieldset>
-                    <legend>Información del Solicitante</legend>
-                    <label> First Name:
+            <form method="get" action="thankyou.html" class="joinForm">
+                <fieldset class="joinFieldset">
+                    <legend class="joinLegend">Information</legend>
+                    <label class="joinLabel"> First Name:
                         <input type="text" name="fname" required title="First Name" autocomplete="given-name">
                     </label>
-                    <label>Last Name:
+                    <label class="joinLabel">Last Name:
                         <input type="text" name="lname" required title="Last Name" autocomplete="family-name">
                     </label>
-                    <label>Position:
+                    <label class="joinLabel">Position:
                         <input type="text" name="title" title="Mínimo 7 caracteres" 
                    autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
                     </label>
                 </fieldset>
-                <fieldset>
-                    <legend>About to the organization</legend>
-                    <label>Email:
+                <fieldset class="joinFieldset">
+                    <legend class="joinLegend">About to the organization</legend>
+                    <label class="joinLabel">Email:
                         <input type="email" name="email" required title="Email" 
                    autocomplete="email" placeholder="ejemplo@correo.com">
                     </label>
-                    <label>Telephone:
+                    <label class="joinLabel">Telephone:
                         <input type="tel" name="phone" required title="Celular" autocomplete="tel">
                     </label>
-                    <label>Organization Name:
+                    <label class="joinLabel">Organization Name:
                         <input type="text" name="organization" required title="Empresa" autocomplete="organization">
                     </label>
                 </fieldset>
