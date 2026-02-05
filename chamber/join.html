@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/join.css">
     <title>Join to Chincha Chamber of commerce</title>
     <script src="scripts/header.js" type="module"></script>
-    <script src="scripts/" type="module"></script>
+    <script src="scripts/join.js" type="module"></script>
     <script src="scripts/footer.js" type="module"></script>
     <link rel="icon" href="images/favicon.ico">
 </head>
@@ -88,30 +88,70 @@
                     </select>
                     </label>
                 </fieldset>
-                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="hidden" name="timestamp" id="timeStamp">
                 <button type="submit">Join to chamber commerce</button>
             </form>
             <aside class="membershipCards">
             <div class="card-anim-fade" id="card-np">
                 <h3>Non-Profit</h3>
-                <button type="button" class="openModal" data-target="mod-np">Learn More</button>
+                <button type="button" class="openModal" data-target="modNp">Learn More</button>
             </div>
             <div class="card-anim-fade" id="cardBronze">
                 <h3>Bronze</h3>
-                <button type="button" class="openModal" data-target="mod-bronze">Learn More</button>
+                <button type="button" class="openModal" data-target="modBronze">Learn More</button>
             </div>
             <div class="card-anim-fade" id="cardSilver">
                 <h3>Silver</h3>
-                <button type="button" class="openModal" data-target="mod-silver">Learn More</button>
+                <button type="button" class="openModal" data-target="modSilver">Learn More</button>
             </div>
             <div class="card-anim-fade" id="cardGold">
                 <h3>Gold</h3>
-                <button type="button" class="openModal" data-target="mod-gold">Learn More</button>
+                <button type="button" class="openModal" data-target="modGold">Learn More</button>
             </div>
             </aside>
             </div>
         </section>
     </main>
+    <dialog id="modNp" class="membership-modal">
+    <button class="close-modal">X</button>
+    <h2>NP Membership</h2>
+    <p>Diseñada para organizaciones sin fines de lucro.</p>
+    <ul>
+        <li>Costo: Gratis ($0)</li>
+        <li>Acceso a eventos básicos</li>
+        <li>Directorio comunitario</li>
+    </ul>
+    </dialog>
+    <dialog id="modBronze" class="membership-modal">
+    <button class="close-modal">X</button>
+    <h2>Bronze Membership</h2>
+    <p>Ideal para pequeños negocios locales.</p>
+    <ul>
+        <li>Costo: $50/mes</li>
+        <li>Publicidad en redes sociales</li>
+        <li>Entrenamientos trimestrales</li>
+    </ul>
+    </dialog>
+    <dialog id="modSilver" class="membership-modal">
+    <button class="close-modal">X</button>
+    <h2>Silver Membership</h2>
+    <p>Para empresas en crecimiento.</p>
+    <ul>
+        <li>Costo: $150/mes</li>
+        <li>Beneficios de Bronze + Spotlight en la web</li>
+        <li>Descuentos en eventos corporativos</li>
+    </ul>
+    </dialog>
+    <dialog id="modGold" class="membership-modal">
+    <button class="close-modal">X</button>
+    <h2>Gold Membership</h2>
+    <p>El nivel premium para visibilidad total.</p>
+    <ul>
+        <li>Costo: $300/mes</li>
+        <li>Todos los beneficios + Posición fija en Home</li>
+        <li>Capacitación personalizada</li>
+    </ul>
+    </dialog>
     <footer><div id="footerContent"></div></footer>
 </body>
 </html>

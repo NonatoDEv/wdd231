@@ -148,6 +148,44 @@ button[type="submit"]:hover {
 #cardBronze { animation-delay: 0.2s; }
 #cardSilver { animation-delay: 0.4s; }
 #cardGold { animation-delay: 0.6s; }
+/*MODAL STYLES*/
+.membership-modal {
+    border: none;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.membership-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(3px);
+}
+
+.close-modal {
+    float: right;
+    background: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.membership-modal h2 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.membership-modal ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
 /* FOOTER STYLES */
 footer {
     background-color: var(--primary-color);
