@@ -78,6 +78,9 @@ header {
     border-left: 4px solid var(--secondary-color);
 }
 /*FORM LAYOUT*/
+.joinTitle{
+    text-align: center;
+}
 .joinLayout {
     display: flex;
     flex-direction: column;
