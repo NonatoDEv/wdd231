@@ -126,7 +126,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #002244;
 }
-/* Animation membership*/
+/*Animation membership*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -166,7 +166,7 @@ button[type="submit"]:hover {
 .close-modal {
     float: right;
     background: var(--secondary-color);
-    color: var(--white);
+    color: var(--primary-color);
     border: none;
     border-radius: 50%;
     width: 30px;
