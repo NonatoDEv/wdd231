@@ -1,0 +1,106 @@
+:root{
+    --charmader-red: #fb6746;
+    --squirtle-blue: #1d56a5;
+    --pikachu-yellow: #ffcb05;
+    --white: #fff;
+    --dark-black: #000;
+    --black: #313131;
+    --pixel-font: 'DotGothic16', sans-serif;
+    --clean-font: 'Montserrat', sans-serif;
+    --mirror-shadow: 5px 5px 0px var(--dark-black);
+    --mirror-shadow-hover: 8px 8px 0px var(--charmader-red);
+}
+.mTitle{
+    font-family: var(--pixel-font);
+    font-size: 2rem;
+    background-color: var(--dark-black);
+    color: var(--charmader-red);
+}
+.title{
+    font-family: var(--pixel-font);
+    font-size: 1.5rem;
+    background-color: var(--charmader-red);
+    color: var(--dark-black);
+}
+article{
+    border: 2px solid var(--black);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: var(--clean-font);
+    font-size: 1rem;
+}
+.swatchGrid, typographyContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:1.5rem;
+}
+article.swatch {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    aspect-ratio: 1/1;
+    border: 2px solid var(--black);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: var(--mirror-shadow);
+}
+article.swatch:hover{
+    transform: translate(-3px, -3px);
+    box-shadow: var(--mirror-shadow-hover);
+}
+.white{
+    background-color: var(--white);
+    color: var(--dark-black);
+}
+.dBlack{
+    background-color: var(--dark-black);
+    color: var(--white);
+}
+.red{
+    background-color: var(--charmader-red);
+    color: var(--dark-black);
+}
+.blue{
+    background-color: var(--squirtle-blue);
+    color: var(--white);
+}
+.yellow{
+    background-color: var(--pikachu-yellow);
+    color: var(--dark-black);
+}
+.black{
+    background-color: var(--black);
+    color: var(--white);
+}
+.typographyContainer{
+    gap: 1.5rem;
+    padding: 1rem;
+}
+.fontSpec{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    border: 2px solid var(--black);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: var(--mirror-shadow);
+}
+.fontSpec:hover{
+    transform: translate(-3px, -3px);
+    box-shadow: var(--mirror-shadow-hover);
+}
+.dotGothic16{
+    font-family: var(--pixel-font);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.montserrat{
+    font-family: var(--clean-font);
+    font-size: 1rem;
+}

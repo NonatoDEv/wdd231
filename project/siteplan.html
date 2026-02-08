@@ -6,39 +6,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/siteplan.css">
     <title>Site plan project</title>
 </head>
 <body>
     <header></header>
-    <main>
-        <h1>Web site plan</h1>
-        <div class="mainContainer">
-            <div class="nameContainer">
+    <main class="sitePlan">
+        <h1 class="mTitle">Web site plan</h1>
+        <section class="mainContainer">
+            <section class="nameContainer">
                 <h2 class="title">site name</h2>
-            </div>
-            <div class="purposeContainer">
+                <article></article>
+            </section>
+            <section class="purposeContainer">
                 <h2 class="title">site purpose</h2>
-            </div>
-            <div class="scenariosContainer">
+                <article></article>
+            </section>
+            <section class="scenariosContainer">
                 <h2 class="title">Scenarios</h2>
-            </div>
-            <div class="schemeContainer">
+                <article></article>
+            </section>
+            <section class="schemeContainer">
                 <h2 class="title">Color Scheme</h2>
-                <p>white: #fff</p>
-                <p>black: #000</p>
-                <p>charmader fire: #fb6746</p>
-                <p>squirtle blue: #1d56a5</p>
-                <p>pikachu yellow: #ffcb05</p>
-                <p>dark mode: #313131</p>
-            </div class="typographyContainer">
+                <div class="swatchGrid">    
+                    <article class="swatch white">white: #fff</article>
+                    <article class="swatch dBlack">Dark Black: #000</article>
+                    <article class="swatch red">charmader red: #fb6746</article>
+                    <article class="swatch blue">squirtle blue: #1d56a5</article>
+                    <article class="swatch yellow">pikachu yellow: #ffcb05</article>
+                    <article class="swatch black">Black: #313131</article>
+                </div>
+            </section>
+            <section class="typographyContainer">
                 <h2 class="title">Typography</h2>
-                <p class="dotGothic16">pixel font: DotGothic16</p>
-                <p class="montserrat">clean font: Montserrat</p>
-            </div>
-            <div class="wireframeContainer">
+                <article class="fontSpec">
+                    <span class="label">Pixel font</span>
+                    <p class="dotGothic16">DotGothic16</p>
+                </article>
+                <article class="fontSpec">
+                    <span class="label">Clean Font</span>
+                    <p class="montserrat">Montserrat</p>
+                </article>
+            </section>
+            <section class="wireframeContainer">
                 <h2 class="title">Wireframe</h2>
-            </div>
-        </div>
+                <img src="" alt="">
+                <img src="" alt="">
+            </section>
+        </section>
     </main>
     <footer class="footerContent"></footer>
 </body>
