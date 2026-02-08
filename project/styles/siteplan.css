@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root{
     --charmader-red: #fb6746;
     --squirtle-blue: #1d56a5;
@@ -84,7 +89,7 @@ article{
     font-size: 1rem;
     line-height: 1.6;
 }
-.swatchGrid, typographyContainer{
+.swatchGrid, .fontSpec, .frame{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap:1.5rem;
@@ -133,7 +138,7 @@ article.swatch:hover{
 }
 .typographyContainer{
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 .fontSpec{
     display: flex;
@@ -160,6 +165,10 @@ article.swatch:hover{
     font-family: var(--clean-font);
     font-size: 1rem;
 }
+.wireframeContainer{
+    margin: 1rem 0;
+    padding: 1rem 0;
+}
 .footerContent {
     padding: 2rem 1rem;
     margin-top: 3rem;
@@ -178,4 +187,64 @@ article.swatch:hover{
     font-family: var(--clean-font);
     font-weight: 300;
     opacity: 0.8;
+}
+@media screen and (min-width:1025px){
+    .mainContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+    .nameContainer,
+    .purposeContainer, 
+    .scenariosContainer,
+    .schemeContainer,
+    .typographyContainer, 
+    .wireframeContainer {
+        grid-column: span 2;
+    }
+    .nameContainer article{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swatchGrid{
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .typographyContainer h2{
+        width: 100%;
+    }
+    .wireframeContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .wireframeContainer article {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .wireframeContainer img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+        border: 2px solid var(--black);
+        box-shadow: var(--mirror-shadow);
+    }
+    section[class*="Container"] {
+        transition: transform 0.3s ease;
+    }
+    section[class*="Container"]:hover {
+        transform: translateY(-5px);
+    }
+    .mTitle {
+        font-size: 3rem;
+        padding: 2rem 0;
+    }
 }
