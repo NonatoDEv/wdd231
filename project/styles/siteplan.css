@@ -149,8 +149,28 @@ article.swatch:hover{
     margin: 1rem 0;
     padding: 1rem 0;
 }
+.wireframeContainer article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border: none;
+}
+.wireframeContainer figure {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .subTitle{
     text-align: center;
+}
+.wireframeContainer img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--black);
+    box-shadow: var(--mirror-shadow);
 }
 .footerContent {
     padding: 2rem 1rem;
@@ -232,9 +252,18 @@ article.swatch:hover{
     }
     .wireframeContainer article {
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        align-items: flex-start;
+        align-items: center;
         gap: 2rem;
+        border: none;
+    }
+    .wireframeContainer figure {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
     .wireframeContainer img {
         width: 100%;
