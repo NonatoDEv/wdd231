@@ -169,6 +169,9 @@ article.swatch:hover{
     margin: 1rem 0;
     padding: 1rem 0;
 }
+.subTitle{
+    text-align: center;
+}
 .footerContent {
     padding: 2rem 1rem;
     margin-top: 3rem;
