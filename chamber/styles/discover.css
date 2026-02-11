@@ -117,9 +117,13 @@ h1{
 }
 .card img {
     object-fit: cover; 
+    aspect-ratio: 3/2;
+    width: 100%;
+    max-width: 300px;
     display: block;
     margin: 0 auto;
     border-radius: 4px;
+    background-color: var(--accent-color);
 }
 .card button {
     align-self: center;
