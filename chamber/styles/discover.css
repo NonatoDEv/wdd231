@@ -99,6 +99,7 @@ h1{
 .card {
     border-radius: var(--border-radius);
     border: var(--gap);
+    padding: 1.5rem;
     background: var(--white);
     display: flex;
     flex-direction: column;
