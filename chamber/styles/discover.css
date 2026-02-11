@@ -82,6 +82,7 @@ header {
 .discoverGrid {
     display: grid;
     place-items: center;
+    justify-items: center;
     gap: var(--gap);
     padding: var(--gap);
     background-color: var(--accent-color);
