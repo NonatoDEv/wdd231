@@ -79,6 +79,10 @@ header {
     border-left: 4px solid var(--secondary-color);
 }
 /*MAIN STYLES*/
+h1{
+    text-align: center;
+    margin: 2rem 0;
+}
 .discoverGrid {
     display: grid;
     place-items: center;
