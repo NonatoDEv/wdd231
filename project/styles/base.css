@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    margin: 0;  
+    padding: 0;
+}
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--font-clean);
+    background-color: var(--gray-light);
+    color: var(--black);
+    line-height: 1.6;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+/*base typography*/
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+h1{ font-size: 2rem;}
+h2{ font-size: 1.75rem;}
+h3{ font-size: 1.5rem;}
+/*links*/
+a:hover{
+    color: var(--charmander-red);
+}
+/*responsive images*/
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/*utility classes*/
+.hidden{
+    display: none;
+}
+.container{
+    width: var(--container-mobile);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+main{
+    flex: 1;
+}
+/*MEDIA QUERIES BASE*/
+/*tablets*/
+@media screen and(min-width:641px){
+    .container{
+        width: var(--container-tablet);
+        padding: 0 var(--spacing-md);
+    }
+    h1{ font-size: 2.5rem;}
+    h2{ font-size: 2rem;}
+    h3{ font-size: 1.75rem;}
+}
+/*desktop*/
+@media screen and(min-width:1025px){
+    .container{
+        width: var(--container-desktop);
+    }
+    h1{ font-size: 3rem;}
+    h2{ font-size: 2.5rem;}
+}
