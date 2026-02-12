@@ -42,7 +42,7 @@
     }
 }
 /*desktop footer*/
-@media screen and(min-width: 1025px) {
+@media screen and (min-width: 1025px) {
     .footerContainer {
         max-width: var(--container-desktop);
     }
