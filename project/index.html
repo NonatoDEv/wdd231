@@ -25,26 +25,41 @@
     <link rel="stylesheet" href="styles/layout/footer.css">
     <!--- title--->
     <title>Poke Data PRO | Interactive Pokédex & Pokemon Encyclopedia</title>
+    <script src="scripts/header.js" defer></script>
     <link rel="icon" href="images/pokeDataFav.ico">
 </head>
 <body>
- <header class="mainHeader">
-    <button class="hamButton" id="menuBtn" aria-label="open menu navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <a href="index.html" class="logoLink">
-        <img src="images/lujoball.webp" alt="Poke Data Pro logo">
-        <h1 class="logo">Poke Data Pro</h1>
-    </a>
-    <nav>
-        <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </nav>
-    
- </header> 
+    <header class="mainHeader">
+        <button class="hamButton" id="menuToggle" aria-label="open menu navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="index.html" class="logoLink">
+            <img src="images/lujoball.webp" alt="Poke Data Pro logo">
+            <h1 class="logo">Poke Data Pro</h1>
+        </a>
+        <nav class="mainNav" id="navMenu">
+            <ul class="navList">
+                <li><a href="#" class="navLink active">Home</a></li>
+                <li><a href="#" class="navLink">Favorites <span class="badge">0</span></a></li>
+            </ul>
+        </nav>
+        <section class="searchContainer">
+            <form action="" class="searchBox" role="search">
+                <input type="text" placeholder="Search by name or ID..." id="pokemonSearch">
+                <button type="submit" class="searchBtn">🔍</button>
+            </form>
+            <nav class="filterContainer">
+                <ul>
+                    <li><button class="filterBtn active">All</button></li>
+                    <li><button class="filterBtn">Kanto</button></li>
+                    <li><button class="filterBtn">Jhoto</button></li>
+                    <li><button class="filterBtn">Hoenn</button></li>
+                    <li><button class="filterBtn">Sinnoh</button></li>
+                </ul>
+            </nav>
+        </section>
+    </header> 
 </body>
 </html>
