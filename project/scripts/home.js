@@ -1,5 +1,5 @@
-import { initHeader } from './components/header.mjs';
-import { renderFooter } from './components/footer.mjs';
+import { initHeader } from '../data/header.mjs';
+import { renderFooter } from '../data/footer.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
