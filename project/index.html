@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="styles/layout/footer.css">
     <!--- title--->
     <title>Poke Data PRO | Interactive Pokédex & Pokemon Encyclopedia</title>
-    <script src="scripts/header.js" defer></script>
+    <script src="scripts/home.js" type="module"></script>
     <link rel="icon" href="images/pokeDataFav.ico">
 </head>
 <body>
@@ -55,6 +55,22 @@
                 <li><a href="maps.html" class="navLink">Maps</a></li>
             </ul>
         </nav>
-    </header> 
+    </header>
+    <main class="mainContent">
+        <section class="heroBanner">
+        <picture>
+            <source media="(min-width: 1025px)" srcset="images/pikachu-by-stakalo.webp">
+            <img src="images/hero-mobile-poke.webp" alt="your travel begins here, on your pokedata PRO" class="heroImage">
+        </picture>
+        <div class="heroOverlay">
+            <div class="heroTextContainer">
+                <h2 class="heroTitle">Bienvenido a Poke Data Pro</h2>
+                <p class="heroSubtitle">Tu enciclopedia Pokémon definitiva. Explora, descubre y domina.</p>
+                <a href="#pokedexContainer" class="ctaButton">Explorar ahora</a>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="mainFooter" id="footerContent"></footer>
 </body>
 </html>
