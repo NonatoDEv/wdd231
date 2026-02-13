@@ -1,17 +1,91 @@
 .mainHeader{
     background-color: var(--black);
     color: var(--white);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: var(--shadow-md);
-}
-.headerContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: var(--spacing-sm);
     gap: var(--spacing-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+    height: 75px;
+}
+.logoGroup {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+.logoLink {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    text-decoration: none;
+}
+.logo {
+    font-family: var(--pixel-font);
+    font-size: var(--spacing-sm);
+    color: var(--pikachu-yellow);
+    margin: 0;
+    white-space: nowrap;
+}
+.logoLink img {
+    width: 32px;
+    height: 32px;
+}
+.mainNav {
+    display: flex;
+    gap: var(--spacing-sm);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100vh;
+    background-color: var(--black);
+    flex-direction: column;
+    padding-top: 80px;
+    transition: right 0.4s ease-in-out;
+    z-index: 1000;
+}
+.mainNav.show {
+    right: 0;
+}
+.navList{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navLink {
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-decoration: none;
+    font-family: var(--font-clean);
+}
+.navLink:hover,
+.navLink.active {
+    background-color: var(--charmander-red);
+    color: var(--white);
+}
+.badge {
+    background-color: var(--pikachu-yellow);
+    color: var(--black);
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 20px;
+    text-align: center;
 }
 .hamButton{
     width: 40px;
@@ -20,6 +94,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 1001;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,72 +118,15 @@
 .hamButton.open span:nth-child(3) {
     transform: rotate(-45deg);
 }
-.logoLink {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    text-decoration: none;
-}
-.logo {
-    font-family: var(--pixel-font);
-    color: var(--pikachu-yellow);
-    font-size: 1rem;
-    margin: 0;
-    white-space: nowrap;
-}
-.logoLink img {
-    width: 32px;
-    height: 32px;
-}
-.mainNav {
-    display: flex;
-    gap: var(--spacing-sm);
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 50%;
-    height: 100vh;
-    background-color: var(--black);
-    flex-direction: column;
-    padding-top: 80px;
-    transition: right 0.4s ease-in-out;
-    z-index: 999;
-}
-.mainNav.show {
-    right: 0;
-}
-.navLink {
-    color: var(--white);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-md);
-    transition: background-color var(--transition-fast);
-    font-size: 0.875rem;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-}
-.navLink:hover,
-.navLink.active {
-    background-color: var(--charmander-red);
-    color: var(--white);
-}
-.badge {
-    background-color: var(--pikachu-yellow);
-    color: var(--black);
-    padding: 0.125rem 0.5rem;
-    border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 700;
-    min-width: 20px;
-    text-align: center;
-}
 /* Search Container */
 .searchContainer {
+    display: none;
     padding: var(--spacing-sm);
     background-color: rgba(255, 255, 255, 0.05);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .searchBox {
+    max-width: 400px;
     display: flex;
     gap: var(--spacing-xs);
     margin-bottom: var(--spacing-sm);
@@ -165,9 +183,6 @@
 }
 /*tablet header*/
 @media screen and (min-width: 641px) {
-    .headerContainer {
-        padding: var(--spacing-md);
-    }
     .logo {
         font-size: 1.25rem;
     }
@@ -187,30 +202,32 @@
 }
 /*desktop header*/
 @media screen and (min-width: 1025px) {
-    .headerContainer {
-        max-width: var(--container-desktop);
-        margin: 0 auto;
+    .hamButton {
+        display: none;
+    }
+    .mainNav {
+        position: static;
+        width: auto;
+        height: auto;
+        right: 0;
+        padding-top: 0;
+        background-color: transparent;
+        display: flex;
     }
     .logo {
-        font-size: 1.5rem;
+        font-size: var(--spacing-lg);
     }
     .logoLink img {
         width: 44px;
         height: 44px;
     }
+    .navList {
+        flex-direction: row;
+        gap: var(--spacing-md);
+    }
     .searchContainer {
-        max-width: var(--container-desktop);
-        margin: 0 auto;
+        display: flex;
+        
     }
-    .searchBox {
-        max-width: 600px;
-        margin: 0 auto var(--spacing-sm);
-    }
-    .filterContainer {
-        flex-wrap: wrap;
-        overflow-x: visible;
-    }   
-    .filterBtn {
-        font-size: 1rem;
-    }
+
 }
