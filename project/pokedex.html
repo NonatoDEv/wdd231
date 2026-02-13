@@ -22,19 +22,19 @@
     <link rel="stylesheet" href="styles/base.css">
     <!--- layout--->
     <link rel="stylesheet" href="styles/layout/header.css">
-    <link rel="stylesheet" href="styles/pages/home.css">
+    <link rel="stylesheet" href="styles/pages/pokedex.css">
     <link rel="stylesheet" href="styles/layout/footer.css">
     <!--- title--->
-    <title>Poke Data PRO</title>
+    <title>Poke Data PRO | Interactive Pokédex & Pokemon Encyclopedia</title>
     <!--- scripts--->
-    <script src="scripts/home.js" type="module"></script>
+    <script src="scripts/pokedex.js" type="module"></script>
     <link rel="icon" href="images/pokeDataFav.ico">
 </head>
 <body>
     <header class="mainHeader">
         <div class="logoGroup">
             <a href="index.html" class="logoLink">
-                <img src="images/lujoball.webp" alt="Poke Data Pro logo" loading="lazy">
+                <img src="images/lujoball.webp" alt="Poke Data Pro logo">
             </a>
             <h1 class="logo">Poke Data Pro</h1>
         </div>
@@ -59,20 +59,34 @@
             </ul>
         </nav>
     </header>
-    <main class="mainContent">
+    <main>
         <section class="heroBanner">
-            <picture>
-                <source media="(min-width: 1025px)" srcset="images/pikachu-by-stakalo.webp">
-                <img src="images/hero-mobile-poke.webp" alt="your travel begins here, on your pokedata PRO" class="heroImage" loading="lazy">
-            </picture>
-            <div class="heroOverlay">
-                <div class="heroTextContainer">
-                    <h2 class="heroTitle">Welcome to Poke Data Pro</h2>
-                    <p class="heroSubtitle">Your Pokémon encyclopedia. Explore, discover and domain.</p>
-                    <a href="pokedex.html" class="ctaButton">Explore now</a>
-                </div>
+        <picture>
+            <source media="(min-width: 1025px)" srcset="images/eevee-by-mamizaza.webp">
+            <img src="images/hero-mobile-poke.webp" alt="Pokemon World" class="heroImage">
+        </picture>
+        <div class="heroOverlay">
+            <div class="heroTextContainer">
+                <h2 class="heroTitle">Pokedex Nacional</h2>
+                <p>Busca, filtra y analiza las estadísticas de cada Pokémon.</p>
             </div>
-        </section>
+        </div>
+    </section>
+    <section id="pokedexGrid" class="pokemonGrid"></section>
+    <template id="pokemonCardTemplate">
+        <article class="pokemonCard">
+            <div class="cardHeader">
+                <span class="pokemonId">#000</span>
+            </div>
+            <figure class="cardImageContainer">
+                <img src="" alt="" loading="lazy" class="pokemonImg">
+            </figure>
+            <div class="cardInfo">
+                <h3 class="pokemonName">Name</h3>
+                <div class="pokemonTypes"></div>
+            </div>
+        </article>
+    </template>
     </main>
     <footer class="mainFooter" id="footerContent"></footer>
 </body>
