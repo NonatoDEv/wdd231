@@ -80,20 +80,18 @@
     border-color: var(--pikachu-yellow,);
     box-shadow: 0 4px 15px rgba(248, 208, 48, 0.4);
 }
-
-/* --- REJILLA ESPECÍFICA PARA GIMNASIOS --- */
-/* Como aquí mostraremos 8 tarjetas a la vez, volvemos al comportamiento Grid en lugar de Flexbox centrado */
+/*GRID GYM*/
 .gymsGridContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
-    align-items: stretch; /* Asegura que todas las tarjetas midan lo mismo */
+    align-items: stretch;
 }
-/* --- ESTILOS DE LA TARJETA DE GIMNASIO --- */
+/*GYM CARD STYLE*/
 .gymCard {
     font-family: var(--clean-font);
-    justify-content: space-between; /* Distribuye el espacio interior uniformemente */
-    max-width: 100%; /* Deja que el CSS Grid controle el ancho */
+    justify-content: space-between;
+    max-width: 100%;
 }
 .gymCity {
     font-size: 0.85rem;
@@ -151,35 +149,30 @@
     font-weight: bold;
     letter-spacing: 0.5px;
 }
-/* --- ESTILOS DEL MODAL DE BATALLA (EQUIPO DEL LÍDER) --- */
-
+/*BATTLE MODAL STYLE*/
 .modalHeader {
     text-align: center;
     margin-bottom: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 15px;
 }
-
 .modalTitle {
     font-size: 1.8rem;
     margin-bottom: 5px;
     color: var(--white);
 }
-
 .modalGymBadge {
     color: var(--pikachu-yellow);
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.9rem;
 }
-
 .leaderTeamList {
     max-height: 60vh;
     overflow-y: auto;
-    padding-right: 5px; /* Evita que el scrollbar tape el contenido */
+    padding-right: 5px;
 }
-
-/* --- TARJETA DE CADA POKÉMON DEL EQUIPO --- */
+/*Card for each team's pokemon*/
 .teamMemberCard {
     display: flex;
     align-items: center;
@@ -191,56 +184,44 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: background var(--transition-fast);
 }
-
 .teamMemberCard:hover {
     background: rgba(255, 255, 255, 0.1);
 }
-
 .teamMemberImg {
     width: 70px;
     height: 70px;
     object-fit: contain;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.6));
 }
-
 .teamMemberInfo {
     flex: 1;
 }
-
 .teamMemberName {
     text-transform: capitalize;
     margin: 0 0 5px 0;
     font-size: 1.1rem;
     color: var(--white);
 }
-
-/* Modificador para los tipos dentro de la lista pequeña */
 .teamMemberTypes {
     justify-content: flex-start;
     gap: 5px;
 }
-
 .modalBadgeType {
     font-size: 0.65rem;
     padding: 3px 8px;
 }
-
-/* Estadísticas rápidas */
 .teamMemberStats {
     text-align: right;
     font-size: 0.85rem;
     color: var(--gray-medium);
 }
-
 .statLine {
     margin-bottom: 3px;
 }
-
 .statHpValue {
     color: #A7DB8D;
     font-weight: bold;
 }
-
 .statAtkValue {
     color: #FF5959;
     font-weight: bold;
