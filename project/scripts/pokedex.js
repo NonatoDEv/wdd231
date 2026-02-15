@@ -5,7 +5,5 @@ import { initPokedex } from '../data/pokedex.mjs';
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
     renderFooter();
-    if (document.getElementById('pokedexGrid')) {
-        initPokedex();
-    }
+    initPokedex();
 });

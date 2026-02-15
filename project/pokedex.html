@@ -71,6 +71,22 @@
                 <p>Busca, filtra y analiza las estadísticas de cada Pokémon.</p>
             </div>
         </div>
+        </section>
+        <section class="searchSection">
+        <form id="pokemonSearchForm" class="searchBox" role="search">
+            <div class="autocompleteWrapper">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search by Name or ID(eg: 25 or pikachu)" 
+                    autocomplete="off"
+                    required
+                >
+                <ul id="suggestionsBox" class="suggestionsList"></ul>
+            </div>
+            <button type="submit" class="searchBtn">Buscar</button>
+        </form>
+        <p id="searchError" class="errorMessage" style="display: none;"></p>
     </section>
     <section id="pokedexGrid" class="pokemonGrid"></section>
     <template id="pokemonCardTemplate">
@@ -87,6 +103,13 @@
             </div>
         </article>
     </template>
+    <dialog id="pokemonModal" class="pokemonDialog">
+    <div class="modalContent">
+        <button id="closeModalBtn" class="closeBtn" aria-label="Cerrar">&times;</button>
+        <div id="modalBody">
+            </div>
+    </div>
+</dialog>
     </main>
     <footer class="mainFooter" id="footerContent"></footer>
 </body>
