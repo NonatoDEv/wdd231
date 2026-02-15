@@ -8,7 +8,6 @@
     border-bottom: 3px solid var(--pikachu-yellow);
     margin-bottom: var(--spacing-lg);
 }
-
 .heroImage {
     width: 100%;
     height: 100%;
@@ -47,7 +46,6 @@
     margin-bottom: var(--spacing-md);
     opacity: 0.9;
 }
-
 /*CTA button*/
 .ctaButton {
     display: inline-block;
@@ -60,7 +58,6 @@
     border-radius: var(--radius-md);
     transition: transform var(--transition-fast), background-color var(--transition-fast);
 }
-
 .ctaButton:hover {
     transform: translateY(-3px);
     background-color: var(--white);
