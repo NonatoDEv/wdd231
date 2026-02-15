@@ -15,7 +15,7 @@
             "leader": "Misty",
             "type": "water",
             "badge": "Cascade Badge",
-            "image": "images/leaders/misty.webp",
+            "image": "images//leaders/misty.webp",
             "team": ["staryu", "starmie"]
         },
         {
@@ -242,30 +242,32 @@
         },
         {
             "id": "s3",
-            "city": "Veilstone City",
-            "leader": "Maylene",
-            "type": "fighting",
-            "badge": "Cobble Badge",
-            "image": "images/leaders/maylene.webp",
-            "team": ["meditite", "machoke", "lucario"]
-        },
-        {
-            "id": "s4",
-            "city": "Pastoria City",
-            "leader": "Crasher Wake",
-            "type": "water",
-            "badge": "Fen Badge",
-            "image": "images/leaders/wake.webp",
-            "team": ["gyarados", "quagsire", "floatzel"]
-        },
-        {
-            "id": "s5",
             "city": "Hearthome City",
             "leader": "Fantina",
             "type": "ghost",
             "badge": "Relic Badge",
             "image": "images/leaders/fantina.webp",
             "team": ["drifblim", "gengar", "mismagius"]
+        },
+        {
+            "id": "s4",
+            "city": "Veilstone City",
+            "leader": "Maylene",
+            "type": "fighting",
+            "badge": "Cobble Badge",
+            "image": "images/leaders/maylene.webp",
+            "team": ["meditite", "machoke", "lucario"]
+            
+        },
+        {
+            "id": "s5",
+             "city": "Pastoria City",
+            "leader": "Crasher Wake",
+            "type": "water",
+            "badge": "Fen Badge",
+            "image": "images/leaders/wake.webp",
+            "team": ["gyarados", "quagsire", "floatzel"]
+            
         },
         {
             "id": "s6",

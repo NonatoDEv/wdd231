@@ -1,0 +1,153 @@
+/*HERO BANNER STYLES*/
+.heroBanner {
+    position: relative;
+    width: 100%;
+    min-height: 400px; 
+    max-height: 660px;
+    overflow: hidden;
+    border-bottom: 3px solid var(--pikachu-yellow);
+    margin-bottom: var(--spacing-lg);
+}
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7); 
+}
+/*HERO TEXT*/
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+}
+.heroTextContainer {
+    padding: var(--spacing-md);
+    max-width: 600px;
+    color: var(--white);
+}
+.heroTitle {
+    font-family: var(--pixel-font);
+    font-size: var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.heroSubtitle {
+    font-size: var(--spacing-sm);
+    font-family: var(--clean-font);
+    margin-bottom: var(--spacing-md);
+    opacity: 0.9;
+}
+/*TABS REGION*/
+.regionFilters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-xl, 40px);
+    padding: 0 var(--spacing-md);
+}
+.regionBtn {
+    font-family: var(--clean-font);
+    background: rgba(30, 30, 30, 0.6);
+    color: var(--gray-medium);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all var(--transition-fast, 0.3s) ease;
+}
+.regionBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+.regionBtn.active {
+    background: var(--pikachu-yellow);
+    color: var(--black);
+    border-color: var(--pikachu-yellow,);
+    box-shadow: 0 4px 15px rgba(248, 208, 48, 0.4);
+}
+
+/* --- REJILLA ESPECÍFICA PARA GIMNASIOS --- */
+/* Como aquí mostraremos 8 tarjetas a la vez, volvemos al comportamiento Grid en lugar de Flexbox centrado */
+.gymsGridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    align-items: stretch; /* Asegura que todas las tarjetas midan lo mismo */
+}
+/* --- ESTILOS DE LA TARJETA DE GIMNASIO --- */
+.gymCard {
+    font-family: var(--clean-font);
+    justify-content: space-between; /* Distribuye el espacio interior uniformemente */
+    max-width: 100%; /* Deja que el CSS Grid controle el ancho */
+}
+.gymCity {
+    font-size: 0.85rem;
+    color: var(--gray-medium);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+.leaderImageContainer {
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.leaderImg {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 10px rgba(0,0,0,0.5));
+    transition: transform 0.3s ease;
+}
+.gymCard:hover .leaderImg {
+    transform: scale(1.1) translateY(-5px);
+}
+.leaderName {
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.badgeContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 100%;
+}
+.badgeIcon {
+    font-size: 1.2rem;
+}
+.badgeName {
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
