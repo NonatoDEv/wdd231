@@ -70,7 +70,7 @@
     align-items: center;
     gap: 0.25rem;
     text-decoration: none;
-    font-family: var(--font-clean);
+    font-family: var(--clean-font);
 }
 .navLink:hover,
 .navLink.active {
