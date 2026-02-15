@@ -58,6 +58,41 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="heroBanner">
+            <picture>
+                <source media="(min-width: 1025px)" srcset="images/pikachu-by-stakalo.webp">
+                <img src="images/hero-mobile-poke.webp" alt="your travel begins here, on your pokedata PRO" class="heroImage" loading="lazy">
+            </picture>
+            <div class="heroOverlay">
+                <div class="heroTextContainer">
+                    <h2 class="heroTitle">Gyms Leaders</h2>
+                    <p class="heroSubtitle">D a los maestros de Kanto, Johto, Hoenn and Sinnoh.</p>
+                </div>
+            </div>
+        </section>
+        <section class="regionFilters">
+            <button class="regionBtn active" data-region="kanto">Kanto</button>
+            <button class="regionBtn" data-region="johto">Johto</button>
+            <button class="regionBtn" data-region="hoenn">Hoenn</button>
+            <button class="regionBtn" data-region="sinnoh">Sinnoh</button>
+        </section>
+        <section id="gymsGrid" class="pokemonGrid gymsGridContainer"></section>
+        <template id="gymCardTemplate">
+            <article class="pokemonCard gymCard">
+                <h3 class="gymCity">City</h3>
+                <figure class="leaderImageContainer">
+                    <img src="" alt="Gym Leader" class="leaderImg" loading="lazy">
+                </figure>
+                <h2 class="leaderName">Name</h2>
+                <div class="pokemonTypes"></div>
+                <div class="badgeContainer">
+                    <span class="badgeIcon">🏅</span>
+                    <p class="badgeName">Medal</p>
+                </div>
+            </article>
+        </template>
+    </main>
     <footer class="mainFooter" id="footerContent"></footer>
 </body>
 </html>
