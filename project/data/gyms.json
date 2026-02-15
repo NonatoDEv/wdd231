@@ -1,0 +1,298 @@
+{
+    "kanto": [
+        {
+            "id": "k1",
+            "city": "Pewter City",
+            "leader": "Brock",
+            "type": "rock",
+            "badge": "Boulder Badge",
+            "image": "images/leaders/brock.webp",
+            "team": ["geodude", "onix"]
+        },
+        {
+            "id": "k2",
+            "city": "Cerulean City",
+            "leader": "Misty",
+            "type": "water",
+            "badge": "Cascade Badge",
+            "image": "images/leaders/misty.webp",
+            "team": ["staryu", "starmie"]
+        },
+        {
+            "id": "k3",
+            "city": "Vermilion City",
+            "leader": "Lt. Surge",
+            "type": "electric",
+            "badge": "Thunder Badge",
+            "image": "images/leaders/surge.webp",
+            "team": ["voltorb", "pikachu", "raichu"]
+        },
+        {
+            "id": "k4",
+            "city": "Celadon City",
+            "leader": "Erika",
+            "type": "grass",
+            "badge": "Rainbow Badge",
+            "image": "images/leaders/erika.webp",
+            "team": ["victreebel", "tangela", "vileplume"]
+        },
+        {
+            "id": "k5",
+            "city": "Fuchsia City",
+            "leader": "Koga",
+            "type": "poison",
+            "badge": "Soul Badge",
+            "image": "images/leaders/koga.webp",
+            "team": ["koffing", "muk", "weezing"]
+        },
+        {
+            "id": "k6",
+            "city": "Saffron City",
+            "leader": "Sabrina",
+            "type": "psychic",
+            "badge": "Marsh Badge",
+            "image": "images/leaders/sabrina.webp",
+            "team": ["kadabra", "mr-mime", "venomoth", "alakazam"]
+        },
+        {
+            "id": "k7",
+            "city": "Cinnabar Island",
+            "leader": "Blaine",
+            "type": "fire",
+            "badge": "Volcano Badge",
+            "image": "images/leaders/blaine.webp",
+            "team": ["growlithe", "ponyta", "rapidash", "arcanine"]
+        },
+        {
+            "id": "k8",
+            "city": "Viridian City",
+            "leader": "Giovanni",
+            "type": "ground",
+            "badge": "Earth Badge",
+            "image": "images/leaders/giovanni.webp",
+            "team": ["rhyhorn", "dugtrio", "nidoqueen", "nidoking", "rhydon"]
+        }
+    ],
+    "johto": [
+        {
+            "id": "j1",
+            "city": "Violet City",
+            "leader": "Falkner",
+            "type": "flying",
+            "badge": "Zephyr Badge",
+            "image": "images/leaders/falkner.webp",
+            "team": ["pidgey", "pidgeotto"]
+        },
+        {
+            "id": "j2",
+            "city": "Azalea Town",
+            "leader": "Bugsy",
+            "type": "bug",
+            "badge": "Hive Badge",
+            "image": "images/leaders/bugsy.webp",
+            "team": ["metapod", "kakuna", "scyther"]
+        },
+        {
+            "id": "j3",
+            "city": "Goldenrod City",
+            "leader": "Whitney",
+            "type": "normal",
+            "badge": "Plain Badge",
+            "image": "images/leaders/whitney.webp",
+            "team": ["clefairy", "miltank"]
+        },
+        {
+            "id": "j4",
+            "city": "Ecruteak City",
+            "leader": "Morty",
+            "type": "ghost",
+            "badge": "Fog Badge",
+            "image": "images/leaders/morty.webp",
+            "team": ["gastly", "haunter", "gengar"]
+        },
+        {
+            "id": "j5",
+            "city": "Cianwood City",
+            "leader": "Chuck",
+            "type": "fighting",
+            "badge": "Storm Badge",
+            "image": "images/leaders/chuck.webp",
+            "team": ["primeape", "poliwrath"]
+        },
+        {
+            "id": "j6",
+            "city": "Olivine City",
+            "leader": "Jasmine",
+            "type": "steel",
+            "badge": "Mineral Badge",
+            "image": "images/leaders/jasmine.webp",
+            "team": ["magnemite", "steelix"]
+        },
+        {
+            "id": "j7",
+            "city": "Mahogany Town",
+            "leader": "Pryce",
+            "type": "ice",
+            "badge": "Glacier Badge",
+            "image": "images/leaders/pryce.webp",
+            "team": ["seel", "dewgong", "piloswine"]
+        },
+        {
+            "id": "j8",
+            "city": "Blackthorn City",
+            "leader": "Clair",
+            "type": "dragon",
+            "badge": "Rising Badge",
+            "image": "images/leaders/clair.webp",
+            "team": ["dragonair", "kingdra"]
+        }
+    ],
+    "hoenn": [
+        {
+            "id": "h1",
+            "city": "Rustboro City",
+            "leader": "Roxanne",
+            "type": "rock",
+            "badge": "Stone Badge",
+            "image": "images/leaders/roxanne.webp",
+            "team": ["geodude", "nosepass"]
+        },
+        {
+            "id": "h2",
+            "city": "Dewford Town",
+            "leader": "Brawly",
+            "type": "fighting",
+            "badge": "Knuckle Badge",
+            "image": "images/leaders/brawly.webp",
+            "team": ["machop", "makuhita"]
+        },
+        {
+            "id": "h3",
+            "city": "Mauville City",
+            "leader": "Wattson",
+            "type": "electric",
+            "badge": "Dynamo Badge",
+            "image": "images/leaders/wattson.webp",
+            "team": ["magnemite", "voltorb", "magneton"]
+        },
+        {
+            "id": "h4",
+            "city": "Lavaridge Town",
+            "leader": "Flannery",
+            "type": "fire",
+            "badge": "Heat Badge",
+            "image": "images/leaders/flannery.webp",
+            "team": ["slugma", "torkoal"]
+        },
+        {
+            "id": "h5",
+            "city": "Petalburg City",
+            "leader": "Norman",
+            "type": "normal",
+            "badge": "Balance Badge",
+            "image": "images/leaders/norman.webp",
+            "team": ["vigoroth", "slaking"]
+        },
+        {
+            "id": "h6",
+            "city": "Fortree City",
+            "leader": "Winona",
+            "type": "flying",
+            "badge": "Feather Badge",
+            "image": "images/leaders/winona.webp",
+            "team": ["swellow", "altaria"]
+        },
+        {
+            "id": "h7",
+            "city": "Mossdeep City",
+            "leader": "Tate & Liza",
+            "type": "psychic",
+            "badge": "Mind Badge",
+            "image": "images/leaders/tateliza.webp",
+            "team": ["lunatone", "solrock"]
+        },
+        {
+            "id": "h8",
+            "city": "Sootopolis City",
+            "leader": "Wallace",
+            "type": "water",
+            "badge": "Rain Badge",
+            "image": "images/leaders/wallace.webp",
+            "team": ["sealeo", "milotic"]
+        }
+    ],
+    "sinnoh": [
+        {
+            "id": "s1",
+            "city": "Oreburgh City",
+            "leader": "Roark",
+            "type": "rock",
+            "badge": "Coal Badge",
+            "image": "images/leaders/roark.webp",
+            "team": ["geodude", "onix", "cranidos"]
+        },
+        {
+            "id": "s2",
+            "city": "Eterna City",
+            "leader": "Gardenia",
+            "type": "grass",
+            "badge": "Forest Badge",
+            "image": "images/leaders/gardenia.webp",
+            "team": ["cherubi", "turtwig", "roserade"]
+        },
+        {
+            "id": "s3",
+            "city": "Veilstone City",
+            "leader": "Maylene",
+            "type": "fighting",
+            "badge": "Cobble Badge",
+            "image": "images/leaders/maylene.webp",
+            "team": ["meditite", "machoke", "lucario"]
+        },
+        {
+            "id": "s4",
+            "city": "Pastoria City",
+            "leader": "Crasher Wake",
+            "type": "water",
+            "badge": "Fen Badge",
+            "image": "images/leaders/wake.webp",
+            "team": ["gyarados", "quagsire", "floatzel"]
+        },
+        {
+            "id": "s5",
+            "city": "Hearthome City",
+            "leader": "Fantina",
+            "type": "ghost",
+            "badge": "Relic Badge",
+            "image": "images/leaders/fantina.webp",
+            "team": ["drifblim", "gengar", "mismagius"]
+        },
+        {
+            "id": "s6",
+            "city": "Canalave City",
+            "leader": "Byron",
+            "type": "steel",
+            "badge": "Mine Badge",
+            "image": "images/leaders/byron.webp",
+            "team": ["bronzor", "steelix", "bastiodon"]
+        },
+        {
+            "id": "s7",
+            "city": "Snowpoint City",
+            "leader": "Candice",
+            "type": "ice",
+            "badge": "Icicle Badge",
+            "image": "images/leaders/candice.webp",
+            "team": ["snover", "sneasel", "medicham", "abomasnow"]
+        },
+        {
+            "id": "s8",
+            "city": "Sunyshore City",
+            "leader": "Volkner",
+            "type": "electric",
+            "badge": "Beacon Badge",
+            "image": "images/leaders/volkner.webp",
+            "team": ["raichu", "ambipom", "luxray"]
+        }
+    ]
+}
