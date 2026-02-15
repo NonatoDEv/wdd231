@@ -47,8 +47,9 @@ export async function initGyms() {
             const cardElement = clone.querySelector('.gymCard');
             cardElement.addEventListener('click', () => {
                 console.log(`Challenging to ${gym.leader}! Team:`, gym.team);
-            });
                 openLeaderModal(gym);
+            });
+                
             grid.appendChild(clone);
         });
     }
@@ -85,38 +86,36 @@ async function openLeaderModal(gym) {
             const attack = pokemon.stats[1].base_stat;
             // Return a card for each Pokémon in the team
             return `
-            <div style="display: flex; align-items: center; gap: 15px; background: rgba(0,0,0,0.4); padding: 10px; border-radius: 12px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.05);">
+            <article class="leaderTeamCard">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" 
                      alt="${pokemon.name}" 
-                     style="width: 70px; height: 70px; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));" loading="lazy">
-                
-                <div style="flex: 1;">
-                    <h4 style="text-transform: capitalize; margin: 0 0 5px 0; font-size: 1.1rem; color: var(--white);">${pokemon.name}</h4>
-                    <div class="pokemonTypes" style="justify-content: flex-start; gap: 5px;">
+                     class="teamMemberImg"
+                     loading="lazy">
+                <section class="teamMemberInfo">
+                    <h4 class="teamMemberName">${pokemon.name}</h4>
+                    <div class="pokemonTypes">
                         ${typesHtml}
                     </div>
-                </div>
+                </section>
                 
-                <div style="text-align: right; font-size: 0.85rem; color: var(--gray-medium);">
-                    <div style="margin-bottom: 3px;">HP: <span style="color: #A7DB8D; font-weight: bold;">${hp}</span></div>
-                    <div>ATK: <span style="color: #FF5959; font-weight: bold;">${attack}</span></div>
-                </div>
-            </div>
+                <section class="teamMemberStats">
+                    <div class="statLine">HP: <span class="statHpValue">${hp}</span></div>
+                    <div class0"statLine">ATK: <span class="statAtkValue">${attack}</span></div>
+                </section>
+            </article>
             `;
         }).join('');
-
-        // 4. Inyectar todo en el modal
+        // 4. Injecting all inside on modal
         modalBody.innerHTML = `
-            <div style="text-align: center; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
-                <h3 style="font-size: 1.8rem; margin-bottom: 5px; color: var(--white);">Equipo de ${gym.leader}</h3>
-                <p style="color: var(--pikachu-yellow); font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">${gym.badge}</p>
-            </div>
+            <header class="modalHeader">
+                <h3 class="modalTitle">Team of ${gym.leader}</h3>
+                <p class="modalGymBadge">${gym.badge}</p>
+            </header>
             
-            <div class="leaderTeamList" style="max-height: 60vh; overflow-y: auto; padding-right: 5px;">
+            <div class="leaderTeamList">
                 ${teamHtml}
             </div>
         `;
-
     } catch (error) {
         console.error("Error cargando el equipo:", error);
         modalBody.innerHTML = `

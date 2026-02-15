@@ -22,12 +22,14 @@
     <link rel="stylesheet" href="styles/base.css">
     <!--- layout--->
     <link rel="stylesheet" href="styles/layout/header.css">
+    <link rel="stylesheet" href="styles/pages/pokedex.css">
     <link rel="stylesheet" href="styles/pages/gyms.css">
     <link rel="stylesheet" href="styles/layout/footer.css">
     <!--- title--->
     <title>Poke Data PRO | Gyms Pokemon Encyclopedia</title>
     <!--- scripts--->
     <script src="scripts/gyms.js" type="module"></script>
+    <script src="scripts/pokedex.js" type="module"></script>
     <link rel="icon" href="images/pokeDataFav.ico">
 </head>
 <body>
@@ -93,6 +95,12 @@
                 </div>
             </article>
         </template>
+        <dialog id="pokemonModal" class="pokemonDialog">
+            <div class="modalContent">
+                <button id="closeModalBtn" class="closeBtn" aria-label="Cerrar">&times;</button>
+            <div id="modalBody"></div>
+            </div>
+        </dialog>
     </main>
     <footer class="mainFooter" id="footerContent"></footer>
 </body>
