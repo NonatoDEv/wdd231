@@ -4,8 +4,9 @@ import { initGyms } from '../data/gyms.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
-    renderFooter();
+    
     if (document.getElementById('gymsGrid')) {
         initGyms();
     }
+    renderFooter();
 });

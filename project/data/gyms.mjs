@@ -49,7 +49,7 @@ export async function initGyms() {
                 console.log(`Challenging to ${gym.leader}! Team:`, gym.team);
                 openLeaderModal(gym);
             });
-                
+            // Append the card to the grid
             grid.appendChild(clone);
         });
     }
@@ -79,7 +79,7 @@ async function openLeaderModal(gym) {
         const teamHtml = teamData.map(pokemon => {
             //Refactor the types into badges
             const typesHtml = pokemon.types.map(t => 
-                `<span class="typeBadge ${t.type.name}" style="font-size: 0.65rem; padding: 3px 8px;">${t.type.name}</span>`
+                `<span class="typeBadge ${t.type.name}">${t.type.name}</span>`
             ).join('');
             //obtain the hp and attack stats for a quick overview (you can expand this with more stats if you want)
             const hp = pokemon.stats[0].base_stat;

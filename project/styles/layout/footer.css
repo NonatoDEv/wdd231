@@ -1,4 +1,5 @@
 .mainFooter{
+    font-family: var(--clean-font);
     background-color: var(--black);
     color: var(--white);
     padding: var(--spacing-lg) 0;
@@ -43,6 +44,7 @@
     filter:invert(88%) sepia(81%) saturate(1476%) hue-rotate(355deg) brightness(103%) contrast(104%);
 }
 .apiCredit {
+    font-family: var(--clean-font);
     color: var(--gray-medium);
     font-size: 0.75rem;
 }
