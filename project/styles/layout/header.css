@@ -118,43 +118,6 @@
 .hamButton.open span:nth-child(3) {
     transform: rotate(-45deg);
 }
-/* Search Container */
-.searchContainer {
-    display: none;
-    padding: var(--spacing-sm);
-    background-color: rgba(255, 255, 255, 0.05);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-.searchBox {
-    max-width: 400px;
-    display: flex;
-    gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-sm);
-}
-.searchBox input {
-    flex: 1;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border: 2px solid var(--gray-medium);
-    border-radius: var(--radius-md);
-    font-family: var(--font-clean);
-    font-size: 0.875rem;
-}
-.searchBox input:focus {
-    outline: none;
-    border-color: var(--pikachu-yellow);
-}
-.searchBtn {
-    background-color: var(--pikachu-yellow);
-    color: var(--black);
-    border: none;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    transition: transform var(--transition-fast);
-}
-.searchBtn:hover {
-    transform: scale(1.05);
-}
 /* Filters */
 .filterContainer {
     display: flex;
