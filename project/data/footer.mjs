@@ -14,7 +14,7 @@ export function renderFooter() {
                 <a href="https://www.linkedin.com/in/a-j-nonato92" class="socialLink" target="_blank" aria-label="LinkedIn">
                     <img src="images/linkedin-logo.svg" alt="LinkedIn" width="30" height="30">
                 </a>
-                <a href="https://www.instagram.com" class="socialLink" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/abeljesusnonato" class="socialLink" target="_blank" aria-label="Instagram">
                     <img src="images/instagram-logo.svg" alt="LinkedIn" width="30" height="30">
                 </a>
             </div>
