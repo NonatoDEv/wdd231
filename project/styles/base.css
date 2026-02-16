@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: var(--font-clean);
+    font-family: var(--clean-font);
     background-color: var(--gray-light);
     color: var(--black);
     line-height: 1.6;
