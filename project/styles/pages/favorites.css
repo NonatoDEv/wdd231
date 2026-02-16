@@ -16,15 +16,25 @@
 }
 /*empty style*/
 .emptyStateContainer {
-    display: none;
+    display: none; /* Se controla con JavaScript */
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente la pokébola, títulos y botón */
+    justify-content: center; /* Centra verticalmente */
     text-align: center;
-    padding: 40px 20px;
+    /* Dimensiones y espaciado */
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto; /* Centra todo el bloque en pantallas de escritorio */
+    padding: 40px 20px;   
+    /* Diseño y Animación */
+    background-color: var(--black);
+    border-radius: var(--radius-lg); /* Opcional: le da un toque de "tarjeta" */
     animation: fadeIn var(--transition-normal, 0.5s) ease-in-out;
 }
 .emptyStateIcon {
+    display: block;
     width: 80px;
-    opacity: 0.5;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
 }
 .emptyStateTitle {
@@ -36,12 +46,20 @@
 .emptyStateText {
     color: var(--gray-medium);
     font-family: var(--clean-font);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 .emptyStateBtn {
     text-decoration: none;
-    display: inline-block;
     padding: 10px 24px;
+    background-color: var(--pikachu-yellow);
+    color: var(--black);
+    border: none;
+    font-weight: 800;
+    border-radius: var(--radius-lg);
+    transition: transform var(--transition-fast, 0.3s) ease;
+}
+.emptyStateBtn:hover {
+    transform: scale(1.05);
 }
 /*release button*/
 .releaseBtn {

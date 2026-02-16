@@ -35,6 +35,7 @@
 .heroTextContainer {
     padding: var(--spacing-md);
     max-width: 600px;
+    background-color: transparent;
     color: var(--white);
 }
 .heroTitle {

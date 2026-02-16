@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return; // Detenemos la función aquí
         } else {
             // Si hay Pokémon, ocultamos el mensaje y mostramos la rejilla
-            emptyMessage.style.display = 'none';
-            grid.style.display = 'grid'; // Asegúrate de usar 'grid' o 'flex' según tu CSS
+            emptyMessage.style.display = 'flex';
+            grid.style.display = 'none'; // Asegúrate de usar 'grid' o 'flex' según tu CSS
         }
 
         // 4. DIBUJAR CADA POKÉMON GUARDADO
