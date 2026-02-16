@@ -378,7 +378,7 @@
 }
 @media screen and (min-width: 641px) {
     .pokemonCard {
-        max-width: 400px;
+        max-width: 360px;
         padding: 24px;
     }
     .cardImageContainer {
@@ -390,7 +390,7 @@
 }
 @media screen and (min-width: 1025px) {
     .pokemonCard {
-        max-width: 480px;
+        max-width: 440px;
         padding: 32px;
     }
     
