@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const releaseBtn = clone.querySelector('.releaseBtn');
             releaseBtn.addEventListener('click', () => {
                 // Confirmamos que el usuario no le dio clic por accidente
-                const confirmRelease = confirm(`¿Estás seguro de que deseas liberar a ${pokemon.name}?`);
+                const confirmRelease = confirm(`Are you sure to release to ${pokemon.name}?`);
                 
                 if (confirmRelease) {
                     // Filtramos el arreglo para quedarnos con todos menos el que acabamos de borrar
