@@ -16,19 +16,17 @@
 }
 /*empty style*/
 .emptyStateContainer {
-    display: none; /* Se controla con JavaScript */
+    display: none;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente la pokébola, títulos y botón */
-    justify-content: center; /* Centra verticalmente */
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    /* Dimensiones y espaciado */
     width: 100%;
     max-width: 640px;
-    margin: 0 auto; /* Centra todo el bloque en pantallas de escritorio */
+    margin: 0 auto;
     padding: 40px 20px;   
-    /* Diseño y Animación */
     background-color: var(--black);
-    border-radius: var(--radius-lg); /* Opcional: le da un toque de "tarjeta" */
+    border-radius: var(--radius-lg);
     animation: fadeIn var(--transition-normal, 0.5s) ease-in-out;
 }
 .emptyStateIcon {
