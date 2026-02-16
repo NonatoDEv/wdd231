@@ -86,29 +86,28 @@
             <button type="submit" class="searchBtn">Search</button>
         </form>
         <p id="searchError" class="errorMessage" style="display: none;"></p>
-    </section>
-    <section id="pokedexGrid" class="pokemonGrid"></section>
-    <template id="pokemonCardTemplate">
-        <article class="pokemonCard">
-            <div class="cardHeader">
-                <span class="pokemonId">#000</span>
+        </section>
+        <section id="pokedexGrid" class="pokemonGrid"></section>
+        <template id="pokemonCardTemplate">
+            <article class="pokemonCard">
+                <div class="cardHeader">
+                    <span class="pokemonId">#000</span>
+                </div>
+                <figure class="cardImageContainer">
+                    <img src="" alt="" loading="lazy" class="pokemonImg">
+                </figure>
+                <div class="cardInfo">
+                    <h3 class="pokemonName">Name</h3>
+                    <div class="pokemonTypes"></div>
+                </div>
+            </article>
+        </template>
+        <dialog id="pokemonModal" class="pokemonDialog">
+            <div class="modalContent">
+                <button id="closeModalBtn" class="closeBtn" aria-label="Cerrar">&times;</button>
+                <div id="modalBody"></div>
             </div>
-            <figure class="cardImageContainer">
-                <img src="" alt="" loading="lazy" class="pokemonImg">
-            </figure>
-            <div class="cardInfo">
-                <h3 class="pokemonName">Name</h3>
-                <div class="pokemonTypes"></div>
-            </div>
-        </article>
-    </template>
-    <dialog id="pokemonModal" class="pokemonDialog">
-    <div class="modalContent">
-        <button id="closeModalBtn" class="closeBtn" aria-label="Cerrar">&times;</button>
-        <div id="modalBody">
-            </div>
-    </div>
-    </dialog>
+        </dialog>
     </main>
     <footer class="mainFooter" id="footerContent"></footer>
 </body>
