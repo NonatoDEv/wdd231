@@ -244,6 +244,7 @@
 .typeBadge.steel { background-color: #B8B8D0; }
 .typeBadge.fairy { background-color: #EE99AC; }
 /*MODAL STYLE(DIALOG)*/
+/*main container*/
 .pokemonDialog {
     font-family: var(--clean-font);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -265,6 +266,7 @@
     padding: var(--spacing-lg, 24px);
     position: relative;
 }
+/*Close button(X)*/
 .closeBtn {
     position: absolute;
     top: 15px;
@@ -278,6 +280,65 @@
 }
 .closeBtn:hover {
     color: var(--charmander-red);
+}
+/*header content*/
+.modalTopHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.modalPokemonName {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--white);
+}
+.modalPokemonId {
+    color: var(--gray-medium);
+    font-size: 1rem;
+    font-weight: normal;
+}
+/*catch button*/
+.favBtn {
+    font-family: var(--clean-font);
+    font-weight: bold;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all var(--transition-fast, 0.3s) ease;
+}
+.favBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+.favBtn.active {
+    background: var(--charmander-red);
+    border-color: var(--charmander-red);
+    box-shadow: 0 4px 10px rgba(240, 128, 48, 0.4);
+}
+/*stats and attacks*/
+.modalDataSection {
+    margin-bottom: 24px;
+}
+.modalSectionTitle {
+    color: var(--gray-medium);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/*system message*/
+.modalErrorMessage {
+    text-align: center;
+    color: var(--charmander-red);
+    font-weight: bold;
+    padding: var(--spacing-md) 0;
 }
 /*LOADING DESIGN*/
 .loaderContainer {
@@ -307,8 +368,8 @@
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
-    background-color: #fff;
-    border: 2px solid #222;
+    background-color: var(--white);
+    border: 2px solid var(--dark-black);
     border-radius: 50%;
 }
 .loadingText {

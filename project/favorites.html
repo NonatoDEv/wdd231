@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abel Jesus Nonato Avalos | nonatoDev">
+    <!--- og property--->
+    <meta name="description" content="Welcome to the gym page of Poke Data PRO. your place where you find the latest news, updates and features of our interactive pokedex">
+    <meta property="og:title" content="PokeDataPro">
+    <meta property="og:description" content="Explore PokeData PRO: A high-performance, mobile-first digital encyclopedia powered by real-time data from Poke-API. Detailed stats, types, and evolutionary chains at your fingertips.">
+    <meta property="og:image" content="https://nonatodev.github.io/wdd231/project/images/eevee-by-mamizaza.webp">
+    <meta property="og:url" content="https://nonatodev.github.io/wdd231/project/index.html">
+    <!--- fonts--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--- normalize--->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!--- variables--->
+    <link rel="stylesheet" href="styles/variables.css">
+    <!--- base--->
+    <link rel="stylesheet" href="styles/base.css">
+    <!--- layout--->
+    <link rel="stylesheet" href="styles/layout/header.css">
+    <link rel="stylesheet" href="styles/pages/pokedex.css">
+    <link rel="stylesheet" href="styles/pages/favorites.css">
+    <link rel="stylesheet" href="styles/layout/footer.css">
+    <!--- title--->
+    <title>Poke Data PRO | Gyms Pokemon Encyclopedia</title>
+    <!--- scripts--->
+    <script src="scripts/favorites.js" type="module"></script>
+    <script src="scripts/pokedex.js" type="module"></script>
+    <link rel="icon" href="images/pokeDataFav.ico">
+</head>
+<body>
+    <header class="mainHeader">
+        <div class="logoGroup">
+            <a href="index.html" class="logoLink">
+                <img src="images/lujoball.webp" alt="Poke Data Pro logo">
+            </a>
+            <h1 class="logo">Poke Data Pro</h1>
+        </div>
+        
+        <button class="hamButton" id="menuToggle" aria-label="open menu navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mainNav" id="navMenu">
+            <ul class="navList">
+                <li><a href="index.html" class="navLink">Home</a></li>
+                <li><a href="pokedex.html" class="navLink">Pokedex</a></li>
+                <li><a href="favorites.html" class="navLink active">Favorites <span class="badge" id="navBadge">0</span></a></li>
+                <li><a href="gyms.html" class="navLink">Gyms</a></li>
+                <li><a href="maps.html" class="navLink">Maps</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainContent">
+        <section class="heroBanner">
+            <picture>
+                <source media="(min-width: 1025px)" srcset="images/my-team.webp">
+                <img src="images/hero-mobile-poke.webp" alt="Your Dream Team" class="heroImage" fetchpriority="high" decoding="async">
+            </picture>
+            <div class="heroOverlay">
+                <div class="heroTextContainer">
+                    <h2 class="heroTitle">My Team</h2>
+                    <p class="heroSubtitle">Your custom lineup of champions. Ready for battle!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="emptyTeamMessage" class="emptyStateContainer">
+            <img src="images/lujoball.webp" alt="Empty Pokeball" class="emptyStateIcon">
+            <h3 class="emptyStateTitle">Your team is empty!</h3>
+            <p class="emptyStateText">You haven't added any Pokémon to your team yet.</p>
+            <a href="pokedex.html" class="filterBtn emptyStateBtn">Go to Pokédex to catch 'em!</a>
+        </section>
+
+        <section id="favoritesGrid" class="pokemonGrid favoritesGridSection"></section>
+
+        <template id="favCardTemplate">
+            <article class="pokemonCard favCard">
+                <h2 class="pokemonName">Name</h2>
+                <div class="pokemonTypes"></div>
+                
+                <figure class="pokemonImageContainer">
+                    <img src="" alt="Pokemon" class="pokemonImg" loading="lazy">
+                </figure>
+                
+                <div class="pokemonId">#000</div>
+                
+                <button class="releaseBtn" aria-label="Release Pokemon">
+                    Liberar
+                </button>
+            </article>
+        </template>
+    </main>
+    <footer class="mainFooter" id="footerContent"></footer>
+</body>
+</html>

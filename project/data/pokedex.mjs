@@ -82,7 +82,7 @@ export function initPokedex() {
             return;
         }
 
-        // Si pasa validación, buscamos
+        //if the validation is ok, hide error messages and show a loading message while fetching data from the API
         errorMsg.style.display = 'none';
         grid.innerHTML = '<p style="color: white; text-align: center;">Searching data...</p>';
 
@@ -113,14 +113,13 @@ function renderCards(pokemons, grid, template) {
         const img = clone.querySelector('.pokemonImg');
         const originalPngUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
         
-        // Usar WebP para navegadores compatibles, con fallback al PNG original
+        //use wsrv.nl to convert the PNG to WebP format on the fly for better performance, and set a fallback to the original PNG in case of any error with the conversion or loading of the WebP image
         img.src = `https://wsrv.nl/?url=${originalPngUrl}&output=webp`;
         img.alt = pokemon.name;
         
         img.onerror = function() {
-            this.src = originalPngUrl; // Fallback al PNG original
+            this.src = originalPngUrl; //fallback to the original PNG if there is an error loading the WebP image
         };
-
         // Render types(Fire, water, etc.) and card color based on the main type
         const typesContainer = clone.querySelector('.pokemonTypes');
         const mainType = pokemon.types[0].type.name;
@@ -140,6 +139,40 @@ function renderCards(pokemons, grid, template) {
         grid.appendChild(clone);
     });
 }
+//LOCALSTORAGE
+export function toggleFavorite(pokemon) {
+    let myTeam = JSON.parse(localStorage.getItem('myPokeTeam')) || [];
+    const existingIndex = myTeam.findIndex(p => p.id === pokemon.id);
+    
+    if (existingIndex >= 0) {
+        myTeam.splice(existingIndex, 1);
+        localStorage.setItem('myPokeTeam', JSON.stringify(myTeam));
+        return 'removed';
+    } else {
+        if (myTeam.length >= 6) {
+            alert("Your team is full! Remove a Pokémon before adding another.");
+            return 'full';
+        }
+        
+        //save only the necessary data of the pokemon to localStorage to optimize space, and also save the URL of the official image to avoid having to construct it again when we load the team page, and also to have a better performance when loading the images in the team page
+        const savedData = {
+            id: pokemon.id,
+            name: pokemon.name,
+            types: pokemon.types,
+            //save the URL of the official image to avoid having to construct it again when we load the team page, and also to have a better performance when loading the images in the team page
+            image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
+        };
+        
+        myTeam.push(savedData);
+        localStorage.setItem('myPokeTeam', JSON.stringify(myTeam));
+        return 'added';
+    }
+}
+//function to check if a pokemon is in the team, used to change the style of the card and the button of add/remove from team, and also to show a message in the modal if the pokemon is in the team or not
+export function isFavorite(pokemonId) {
+    const myTeam = JSON.parse(localStorage.getItem('myPokeTeam')) || [];
+    return myTeam.some(p => p.id === pokemonId);
+}
 //MODAL LOGIC
 const statColors = {
     'hp': '#A7DB8D',
@@ -153,38 +186,38 @@ const statColors = {
  async function openPokemonModal(pokemon) {
     const modal = document.getElementById('pokemonModal');
     const modalBody = document.getElementById('modalBody');
-
+    //Show a loading message while fetching the data of the moves and rendering the stats bars, to improve user experience and give feedback that something is happening, since some pokemons have many moves and fetching all the data can take some time
     modalBody.innerHTML = `
         <div class="loaderContainer">
             <div class="cssPokeball"></div>
-            <p class="loadingText">Analizando datos de combate...</p>
+            <p class="loadingText">Analyzing data...</p>
         </div>
     `;
     modal.showModal();
    try {
-        // 1. Build the stats bars HTML with dynamic colors and widths based on the base_stat value, using the statColors dictionary for colors
+        //Build the stats bars HTML with dynamic colors and widths based on the base_stat value, using the statColors dictionary for colors
         const statsHtml = pokemon.stats.map(s => {
             const statNameRaw = s.stat.name;
             // Text formatting Convert:"special-attack" a "Sp. Atk", "defense" a "Def", etc.
             const statLabel = statNameRaw.replace('special-', 'Sp. ').replace('attack', 'Atk').replace('defense', 'Def');
             const percentage = Math.min((s.base_stat / 255) * 100, 100); 
-            // Obtain the color of the dictionary (if not exist, use grease)
+            // Obtain the color of the dictionary
             const barColor = statColors[statNameRaw] || '#A8A878'; 
             
             return `
-            <div class="statRow">
+            <section class="statRow">
                 <span class="statName">${statLabel}</span>
                 <div class="statBarContainer">
                     <div class="statBar" style="width: ${percentage}%; background-color: ${barColor};"></div>
                 </div>
                 <span class="statValue">${s.base_stat}</span>
-            </div>
+            </section>
             `;
         }).join('');
 
         //looking at the pokemon attacks and doing a fetch to each URL of the attack to obtain the type of it, then show it in the modal with the same style of the types in the card, but smaller and with a different class for example "moveItemBadge" to add some margin between them
-        //Only takes 6 attacks to not overload the modal, you can change this number if you want to show more or less attacks
-        const topMoves = pokemon.moves.slice(0, 6);
+        //Only takes 6 attacks to not overload the modal.
+        const topMoves = pokemon.moves.slice(0, 7);
         
         //make fetches in parallel for better performance instead of doing them one by one, using Promise.all to wait for all the fetches to finish before rendering the modal content
         const movesData = await Promise.all(
@@ -194,44 +227,71 @@ const statColors = {
             })
         );
 
-        // 3. Builds HTML attacks with the type badge and the name of the attack, using the same colors as the types in the card, but with a smaller size and some margin between them
+        //Builds HTML attacks with the type badge and the name of the attack, using the same colors as the types in the card, but with a smaller size and some margin between them
         const movesHtml = movesData.map(move => `
             <span class="typeBadge ${move.type.name} moveItemBadge">
                 ${move.name.replace('-', ' ')}
             </span>
         `).join('');
 
-        // 4. insert the stats and moves HTML into the modal body, along with the name of the pokemon as title, and some basic styling for better presentation
-        modalBody.innerHTML = `
-            <h3 style="text-transform: capitalize; text-align: center; font-size: 1.8rem; margin-bottom: 20px;">
-                ${pokemon.name}
-            </h3>
-            
-            <h4 style="color: var(--gray-medium); margin-bottom: 10px; font-size: 0.9rem; text-transform: uppercase;">Base Stats</h4>
-            <div class="pokemonStats">
-                ${statsHtml}
-            </div>
+        //insert all the content in the modal, including the name, id, stats bars and moves, and also add a button to add/remove from team with a dynamic style and text based on if the pokemon is in the team or not, using the isFavorite function to check if the pokemon is in the team and change the style and text of the button accordingly
+        const heartClass = isFavorite(pokemon.id) ? 'favBtn active' : 'favBtn';
+        const heartText = isFavorite(pokemon.id) ? '❤️ OnTeam' : '🤍 Catch';
 
-            <h4 style="color: var(--gray-medium); margin-top: 24px; margin-bottom: 10px; font-size: 0.9rem; text-transform: uppercase;">Top Moves</h4>
-            <div class="movesList">
-                ${movesHtml}
-            </div>
+        modalBody.innerHTML = `
+            <article class="modalTopHeader">
+                <h2 class="modalPokemonName">
+                    ${pokemon.name} <span class="modalPokemonId">#${pokemon.id}</span>
+                </h2>
+                
+                <button id="addFavBtn" class="${heartClass}">
+                    ${heartText}
+                </button>
+            </article>
+            
+            <section class="modalDataSection">
+                <h3 class="modalSectionTitle">Base Stats</h3>
+                <div class="pokemonStats">
+                    ${statsHtml}
+                </div>
+            </section>
+
+            <section class="modalDataSection">
+                <h3 class="modalSectionTitle">Top Moves</h3>
+                <div class="movesList">
+                    ${movesHtml}
+                </div>
+            </section>
         `;
+
+        // --- 4. DARLE VIDA AL BOTÓN ---
+        const favBtn = document.getElementById('addFavBtn');
+        favBtn.addEventListener('click', () => {
+            const result = toggleFavorite(pokemon);
+            
+            if (result === 'added') {
+                favBtn.innerHTML = '❤️ On team';
+                favBtn.classList.add('active'); 
+            } else if (result === 'removed') {
+                favBtn.innerHTML = '🤍 Catch';
+                favBtn.classList.remove('active'); 
+            }
+        });
+
     } catch (error) {
         console.error("Error cargando los detalles del modal:", error);
-        modalBody.innerHTML = '<p style="text-align:center; color: var(--charmander-red);">Error al cargar los datos de combate.</p>';
+        // ¡Todo el estilo removido de aquí!
+        modalBody.innerHTML = '<p class="modalErrorMessage">Error to renders the data</p>';
     }
 }
 //Configure the close button of the modal and also allow to close the modal if the user clicks outside of the box, using the native close() method of the dialog element for better performance and compatibility
 document.addEventListener('DOMContentLoaded', () => {
     const closeModalBtn = document.getElementById('closeModalBtn');
     const pokemonModal = document.getElementById('pokemonModal');
-    
     if (closeModalBtn && pokemonModal) {
         closeModalBtn.addEventListener('click', () => {
             pokemonModal.close(); //native function to close the dialog element
         });
-
         //Close the modal if the user clicks outside of the modal content, using the click event and checking if the click is outside of the modal dimensions
         pokemonModal.addEventListener('click', (e) => {
             const dialogDimensions = pokemonModal.getBoundingClientRect();

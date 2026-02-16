@@ -1,0 +1,55 @@
+/*main grid*/
+.favoritesGridSection {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+/*empty style*/
+.emptyStateContainer {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn var(--transition-normal, 0.5s) ease-in-out;
+}
+.emptyStateIcon {
+    width: 80px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+}
+.emptyStateTitle {
+    color: var(--white);
+    font-family: var(--clean-font);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+.emptyStateText {
+    color: var(--gray-medium);
+    font-family: var(--clean-font);
+    margin-bottom: 20px;
+}
+.emptyStateBtn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 24px;
+}
+/*release button*/
+.releaseBtn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--charmander-red);
+    background: transparent;
+    color: var(--charmander-red);
+    cursor: pointer;
+    font-family: var(--clean-font);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all var(--transition-fast, 0.3s) ease;
+}
+.releaseBtn:hover {
+    background: var(--charmander-red);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(240, 128, 48, 0.3);
+}
