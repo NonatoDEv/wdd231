@@ -49,7 +49,7 @@ main{
 }
 /*MEDIA QUERIES BASE*/
 /*tablets*/
-@media screen and(min-width:641px){
+@media screen and (min-width:641px){
     .container{
         width: var(--container-tablet);
         padding: 0 var(--spacing-md);
@@ -59,7 +59,7 @@ main{
     h3{ font-size: 1.75rem;}
 }
 /*desktop*/
-@media screen and(min-width:1025px){
+@media screen and (min-width:1025px){
     .container{
         width: var(--container-desktop);
     }
