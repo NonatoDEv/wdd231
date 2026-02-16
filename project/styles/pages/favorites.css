@@ -1,7 +1,18 @@
 /*main grid*/
 .favoritesGridSection {
-    margin-top: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-xl, 40px) auto;
+}
+.favCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
 }
 /*empty style*/
 .emptyStateContainer {
@@ -34,22 +45,24 @@
 }
 /*release button*/
 .releaseBtn {
-    margin-top: 15px;
+    margin-top: auto;
     width: 100%;
-    padding: 8px;
+    padding: 10px 15px;
     border-radius: 8px;
-    border: 1px solid var(--charmander-red);
-    background: transparent;
-    color: var(--charmander-red);
-    cursor: pointer;
+    border: 2px solid var(--dark-black);
+    background: rgba(255, 89, 89, 0.1);
+    color: var(--white, #fff);
     font-family: var(--clean-font);
+    font-size: 0.9rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    cursor: pointer;
     transition: all var(--transition-fast, 0.3s) ease;
 }
 .releaseBtn:hover {
-    background: var(--charmander-red);
-    color: var(--white);
-    box-shadow: 0 4px 10px rgba(240, 128, 48, 0.3);
+    background: var(--dark-black);
+    color: var(--white, #fff);
+    box-shadow: 0 4px 15px rgba(255, 89, 89, 0.4);
+    transform: translateY(-2px);
 }
