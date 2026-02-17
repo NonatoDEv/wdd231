@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // 3. LA LÓGICA DEL ESTADO VACÍO
         if (myTeam.length === 0) {
             // Si no hay Pokémon, mostramos el mensaje triste y ocultamos la rejilla
-            emptyMessage.style.display = 'block';
+            emptyMessage.style.display = 'flex';
             grid.style.display = 'none';
             return; // Detenemos la función aquí
         } else {
             // Si hay Pokémon, ocultamos el mensaje y mostramos la rejilla
-            emptyMessage.style.display = 'flex';
-            grid.style.display = 'none'; // Asegúrate de usar 'grid' o 'flex' según tu CSS
+            emptyMessage.style.display = 'none';
+            grid.style.display = 'grid'; // Asegúrate de usar 'grid' o 'flex' según tu CSS
         }
 
         // 4. DIBUJAR CADA POKÉMON GUARDADO

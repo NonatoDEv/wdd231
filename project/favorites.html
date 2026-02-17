@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="styles/base.css">
     <!--- layout--->
     <link rel="stylesheet" href="styles/layout/header.css">
-    <link rel="stylesheet" href="styles/pages/pokedex.css">
     <link rel="stylesheet" href="styles/pages/favorites.css">
     <link rel="stylesheet" href="styles/layout/footer.css">
     <!--- title--->
@@ -52,7 +51,6 @@
                 <li><a href="pokedex.html" class="navLink">Pokedex</a></li>
                 <li><a href="favorites.html" class="navLink active">Favorites <span class="badge" id="navBadge">0</span></a></li>
                 <li><a href="gyms.html" class="navLink">Gyms</a></li>
-                <li><a href="maps.html" class="navLink">Maps</a></li>
             </ul>
         </nav>
     </header>
@@ -69,16 +67,13 @@
                 </div>
             </section>
         </section>
-
         <section id="emptyTeamMessage" class="emptyStateContainer">
             <img src="images/lujoball.webp" alt="Empty Pokeball" class="emptyStateIcon">
             <h3 class="emptyStateTitle">Your team is empty!</h3>
             <p class="emptyStateText">You haven't added any Pokémon to your team yet.</p>
             <a href="pokedex.html" class="filterBtn emptyStateBtn">Go to Pokédex to catch 'em!</a>
         </section>
-
         <section id="favoritesGrid" class="pokemonGrid favoritesGridSection"></section>
-
         <template id="favCardTemplate">
             <article class="pokemonCard favCard">
                 <h2 class="pokemonName">Name</h2>
