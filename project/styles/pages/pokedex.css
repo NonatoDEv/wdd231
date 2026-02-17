@@ -66,17 +66,15 @@
     margin: 0 auto var(--spacing-lg) auto;
     padding: 0 var(--spacing-md);
     text-align: center;
-    
 }
 .searchBox {
     display: flex;
     gap: 10px;
-    background: rgba(20, 20, 20, 0.8);
+    background-color: rgba(20, 20, 20, 0.8);
+    color: var(--white);
     padding: 10px;
     border-radius: var(--radius-md);
     border: 1px solid var(--gray-medium);
-    background-color: var(--dark-black);
-    color: var(--white);
 }
 .autocompleteWrapper {
     position: relative;
@@ -84,8 +82,8 @@
 }
 .autocompleteWrapper input {
     width: 100%;
-    background: transparent;
     border: none;
+    background-color: transparent;
     color: var(--white);
     padding: 10px;
     font-size: 1rem;
