@@ -89,6 +89,27 @@
     text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     box-shadow: var(--shadow-sm);
 }
+/* =========================================
+   COLORS FOR TYPE BADGES
+========================================= */
+.typeBadge.grass { background-color: var(--grass); }
+.typeBadge.fire { background-color: var(--fire); }
+.typeBadge.water { background-color: var(--water); }
+.typeBadge.bug { background-color: var(--bug); }
+.typeBadge.normal { background-color: var(--normal); }
+.typeBadge.poison { background-color: var(--poison); }
+.typeBadge.electric { background-color: var(--electric); }
+.typeBadge.ground { background-color: var(--ground); }
+.typeBadge.rock { background-color: var(--rock); }
+.typeBadge.flying { background-color: var(--flying); }
+.typeBadge.fighting { background-color: var(--fighting); }
+.typeBadge.psychic { background-color: var(--psychic); }
+.typeBadge.ghost { background-color: var(--ghost); }
+.typeBadge.ice { background-color: var(--ice); }
+.typeBadge.dragon { background-color: var(--dragon); }
+.typeBadge.dark { background-color: var(--dark); }
+.typeBadge.steel { background-color: var(--steel); }
+.typeBadge.fairy { background-color: var(--fairy); }
 /*release button*/
 .releaseBtn {
     margin-top: auto;
