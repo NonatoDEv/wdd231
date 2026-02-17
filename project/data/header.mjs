@@ -11,6 +11,7 @@ export function initHeader() {
     //dynamic active class for nav links
     const navLinks = document.querySelectorAll('.navLink');
     let currentPath = window.location.pathname.split('/').pop();
+    // Handle the case when the path is empty (e.g., when accessing the root URL)
     if (currentPath === '') {
         currentPath = 'index.html';
     }
