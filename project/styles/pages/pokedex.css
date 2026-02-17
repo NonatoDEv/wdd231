@@ -75,6 +75,8 @@
     padding: 10px;
     border-radius: var(--radius-md);
     border: 1px solid var(--gray-medium);
+    background-color: var(--dark-black);
+    color: var(--white);
 }
 .autocompleteWrapper {
     position: relative;
@@ -101,11 +103,11 @@
     cursor: pointer;
     transition: transform var(--transition-fast);
 }
-
 .searchBtn:hover {
     transform: scale(1.05);
 }
 .errorMessage {
+    display: none;
     color: var(--charmander-red);
     margin-top: 10px;
     font-size: 0.9rem;
