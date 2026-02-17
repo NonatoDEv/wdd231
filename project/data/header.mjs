@@ -8,4 +8,17 @@ export function initHeader() {
             navMenu.classList.toggle('show');
         });
     }
+    //dynamic active class for nav links
+    const navLinks = document.querySelectorAll('.navLink');
+    let currentPath = window.location.pathname.split('/').pop();
+    if (currentPath === '') {
+        currentPath = 'index.html';
+    }
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        link.classList.remove('active');
+        if (linkHref === currentPath) {
+            link.classList.add('active');
+        }
+    });
 }
