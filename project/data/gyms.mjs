@@ -1,6 +1,5 @@
 // Our local JSON 
 let gymsDatabase = {};
-
 export async function initGyms() {
     const grid = document.getElementById('gymsGrid');
     const template = document.getElementById('gymCardTemplate');
@@ -12,7 +11,7 @@ export async function initGyms() {
         gymsDatabase = await response.json();
         renderGyms('kanto');
     } catch (error) {
-        console.error("Loding error with the database of gyms:", error);
+        console.error("Loading error from gym's database :", error);
     }
     //Events for the filter buttons
     filterButtons.forEach(btn => {
@@ -97,7 +96,6 @@ async function openLeaderModal(gym) {
                         ${typesHtml}
                     </div>
                 </section>
-                
                 <section class="teamMemberStats">
                     <div class="statLine">HP: <span class="statHpValue">${hp}</span></div>
                     <div class0"statLine">ATK: <span class="statAtkValue">${attack}</span></div>
@@ -105,7 +103,7 @@ async function openLeaderModal(gym) {
             </article>
             `;
         }).join('');
-        // 4. Injecting all inside on modal
+        //Injecting all inside on modal
         modalBody.innerHTML = `
             <header class="modalHeader">
                 <h3 class="modalTitle">Team of ${gym.leader}</h3>
@@ -117,11 +115,11 @@ async function openLeaderModal(gym) {
             </div>
         `;
     } catch (error) {
-        console.error("Error cargando el equipo:", error);
+        console.error("Error loading the team:", error);
         modalBody.innerHTML = `
-            <div style="text-align:center; padding: 20px;">
-                <p style="color: var(--charmander-red); font-weight: bold; font-size: 1.2rem;">¡Error de conexión!</p>
-                <p style="color: var(--gray-medium); font-size: 0.9rem;">No pudimos conectar con la Liga Pokémon.</p>
+            <div class="errorConnectionBox">
+                <p class="errorConnectionTitle">¡Error connection!</p>
+                <p class="errorConnectionText">We can't connect to the Pokémon League.</p>
             </div>
         `;
     }
