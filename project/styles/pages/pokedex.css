@@ -101,46 +101,6 @@
     z-index: 1;
     cursor: pointer;
 }
-.cardHeader {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
-}
-.pokemonId {
-    background: rgba(0, 0, 0, 0.5);
-    color: var(--gray-medium);
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-.cardImageContainer {
-    height: 150px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-.pokemonImg {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    filter: drop-shadow(0 8px 10px rgba(0,0,0,0.6));
-    transition: transform var(--transition-normal);
-}
-.pokemonCard:hover .pokemonImg {
-    transform: scale(1.15) rotate(3deg);
-}
-.pokemonName {
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 15px;
-}
-
 /*MODAL INSIDE STYLES */
 .modalTopHeader {
     display: flex;

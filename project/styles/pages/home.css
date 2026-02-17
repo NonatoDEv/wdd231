@@ -14,6 +14,72 @@
     transform: translateY(-3px);
     background-color: var(--white);
 }
+/* =========================================
+   FEATURED CAROUSEL (Landing Page)
+========================================= */
+.featuredSection {
+    padding: var(--spacing-xl, 40px) var(--spacing-md, 20px);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.featuredTitle {
+    color: var(--pikachu-yellow);
+    font-family: var(--clean-font);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.carouselTrack {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; 
+    scrollbar-color: var(--charmander-red) rgba(255, 255, 255, 0.1);
+}
+.carouselTrack::-webkit-scrollbar {
+    height: 8px;
+}
+.carouselTrack::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+.carouselTrack::-webkit-scrollbar-thumb {
+    background: var(--charmander-red);
+    border-radius: 10px;
+}
+
+/* Solo le decimos a la tarjeta cómo comportarse DENTRO del carrusel */
+.carouselTrack .pokemonCard {
+    min-width: 280px; 
+    flex-shrink: 0;   
+    scroll-snap-align: center; 
+}
+
+/* =========================================
+   CAROUSEL ERROR STATE
+========================================= */
+.carouselErrorBox {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 89, 89, 0.3);
+    border-radius: var(--radius-lg);
+}
+.carouselErrorText {
+    color: var(--charmander-red);
+    font-family: var(--clean-font);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+}
 /*DESKTOP HERO*/
 @media screen and (min-width: 1025px) {
     .heroBanner { 

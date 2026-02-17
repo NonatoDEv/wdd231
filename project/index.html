@@ -66,6 +66,22 @@
                 </div>
             </section>
         </section>
+        <section class="featuredSection">
+            <h2 class="featuredTitle">Featured Pokémon</h2>    
+            <div class="carouselTrack" id="featuredCarousel"></div>
+        </section>
+        <template id="carouselCardTemplate">
+            <article class="pokemonCard">
+                <div class="cardHeader">
+                    <span class="pokemonId">#000</span>
+                </div>
+                <figure class="cardImageContainer">
+                    <img src="" alt="Pokemon" class="pokemonImg" loading="lazy">
+                </figure>
+                <h3 class="pokemonName">Name</h3>
+                <div class="pokemonTypes"></div>
+            </article>
+        </template>
     </main>
     <footer class="mainFooter" id="footerContent"></footer>
 </body>

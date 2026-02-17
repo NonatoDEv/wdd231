@@ -248,14 +248,12 @@ const statColors = {
                     ${heartText}
                 </button>
             </article>
-            
             <section class="modalDataSection">
                 <h3 class="modalSectionTitle">Base Stats</h3>
                 <div class="pokemonStats">
                     ${statsHtml}
                 </div>
             </section>
-
             <section class="modalDataSection">
                 <h3 class="modalSectionTitle">Top Moves</h3>
                 <div class="movesList">
@@ -264,7 +262,7 @@ const statColors = {
             </section>
         `;
 
-        // --- 4. DARLE VIDA AL BOTÓN ---
+        //Configure the add/remove from team button with the toggleFavorite function, and also change the style and text of the button based on the result of the toggleFavorite function, and also show an alert if the team is full when trying to add a pokemon to the team
         const favBtn = document.getElementById('addFavBtn');
         favBtn.addEventListener('click', () => {
             const result = toggleFavorite(pokemon);
@@ -277,10 +275,8 @@ const statColors = {
                 favBtn.classList.remove('active'); 
             }
         });
-
     } catch (error) {
-        console.error("Error cargando los detalles del modal:", error);
-        // ¡Todo el estilo removido de aquí!
+        console.error("Error calling modal details:", error);
         modalBody.innerHTML = '<p class="modalErrorMessage">Error to renders the data</p>';
     }
 }
