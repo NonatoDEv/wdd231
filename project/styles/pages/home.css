@@ -22,6 +22,7 @@
     text-align: center;
 }
 .featuredTitle {
+    text-align: center;
     color: var(--pikachu-yellow);
     font-family: var(--clean-font);
     font-size: 2rem;
