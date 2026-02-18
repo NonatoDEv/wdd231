@@ -23,12 +23,14 @@
 }
 .featuredTitle {
     text-align: center;
+    background-color: var(--black);
     color: var(--pikachu-yellow);
     font-family: var(--clean-font);
     font-size: 2rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border-radius: var(--radius-md);
 }
 .carouselWrapper {
     width: 100%;
