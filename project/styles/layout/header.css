@@ -74,8 +74,8 @@
 }
 .navLink:hover,
 .navLink.active {
-    background-color: var(--charmander-red);
-    color: var(--white);
+    background-color: var(--pikachu-yellow);
+    color: var(--dark-black);
 }
 .badge {
     background-color: var(--pikachu-yellow);

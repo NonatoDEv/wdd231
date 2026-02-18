@@ -55,6 +55,7 @@
     margin: var(--spacing-lg) auto;
     padding: 40px 20px;   
     background-color: var(--black);
+    color: var(--white);
     border-radius: var(--radius-lg);
     animation: fadeIn var(--transition-normal, 0.5s) ease-in-out;
 }
