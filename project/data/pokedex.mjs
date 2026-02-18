@@ -108,15 +108,12 @@ function renderCards(pokemons, grid, template) {
         const clone = template.content.cloneNode(true);
         clone.querySelector('.pokemonId').textContent = `#${pokemon.id.toString().padStart(3, '0')}`;
         clone.querySelector('.pokemonName').textContent = pokemon.name;
-        
         // Optimize image loading: Convert PNG to WebP on the fly using a third-party service (wsrv.nl) for better performance
         const img = clone.querySelector('.pokemonImg');
         const originalPngUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
-        
         //use wsrv.nl to convert the PNG to WebP format on the fly for better performance, and set a fallback to the original PNG in case of any error with the conversion or loading of the WebP image
         img.src = `https://wsrv.nl/?url=${originalPngUrl}&output=webp`;
         img.alt = pokemon.name;
-        
         img.onerror = function() {
             this.src = originalPngUrl; //fallback to the original PNG if there is an error loading the WebP image
         };
@@ -233,7 +230,6 @@ const statColors = {
                 ${move.name.replace('-', ' ')}
             </span>
         `).join('');
-
         //insert all the content in the modal, including the name, id, stats bars and moves, and also add a button to add/remove from team with a dynamic style and text based on if the pokemon is in the team or not, using the isFavorite function to check if the pokemon is in the team and change the style and text of the button accordingly
         const heartClass = isFavorite(pokemon.id) ? 'favBtn active' : 'favBtn';
         const heartText = isFavorite(pokemon.id) ? '❤️ OnTeam' : '🤍 Catch';
@@ -261,7 +257,6 @@ const statColors = {
                 </div>
             </section>
         `;
-
         //Configure the add/remove from team button with the toggleFavorite function, and also change the style and text of the button based on the result of the toggleFavorite function, and also show an alert if the team is full when trying to add a pokemon to the team
         const favBtn = document.getElementById('addFavBtn');
         favBtn.addEventListener('click', () => {

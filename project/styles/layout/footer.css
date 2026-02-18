@@ -49,10 +49,12 @@
     font-size: 0.75rem;
 }
 .apiCredit a {
-    color: var(--squirtle-blue);
+    color: var(--pikachu-yellow);
+    text-decoration: none;
+    
 }
 .apiCredit a:hover {
-    color: var(--pikachu-yellow);
+    color: var(--charmander-red);
 }
 /*tablet footer*/
 @media screen and (min-width: 641px) {

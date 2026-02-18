@@ -21,6 +21,7 @@ export function renderFooter() {
             <div id="footerInfo">
                 <p>&copy; ${currentYear} | <strong>${author}</strong> | ${location}</p>
                 <p class="apiCredit">Data provided by <a href="https://pokeapi.co/" target="_blank">PokeAPI</a></p>
+                <p class="apiCredit">Curious how it works? <a href="https://www.loom.com/share/e8e09b8282014d3a81e9a5a2dba566e8" target="_blank">Check out the video on Loom</a></p>
             </div>
             <div id="lastModify">
                 <p class="apiCredit">Last Modification: ${lastModification}</p>
