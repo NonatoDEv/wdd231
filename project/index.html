@@ -67,8 +67,10 @@
             </section>
         </section>
         <section class="featuredSection">
-            <h2 class="featuredTitle">Featured Pokémon</h2>    
-            <div class="carouselTrack" id="featuredCarousel"></div>
+            <h2 class="featuredTitle">Featured Pokémon</h2>
+            <div class="carouselWrapper">
+                <div class="carouselTrack" id="featuredCarousel"></div>
+            </div>
         </section>
         <template id="carouselCardTemplate">
             <article class="pokemonCard">
@@ -82,6 +84,15 @@
                 <div class="pokemonTypes"></div>
             </article>
         </template>
+        <section class="weatherSection">
+            <h2 class="featuredTitle">Local Weather</h2>
+            <div id="weatherContainer" class="weatherContainer">
+                <div class="weatherPrompt">
+                    <p>Allow location access to check weather conditions for Pokémon hunting!</p>
+                    <button id="getLocationBtn" class="pillBtn">Get Local Weather</button>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="mainFooter" id="footerContent"></footer>
 </body>

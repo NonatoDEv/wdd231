@@ -14,9 +14,7 @@
     transform: translateY(-3px);
     background-color: var(--white);
 }
-/* =========================================
-   FEATURED CAROUSEL (Landing Page)
-========================================= */
+/*FEATURED CAROUSEL*/
 .featuredSection {
     padding: var(--spacing-xl, 40px) var(--spacing-md, 20px);
     max-width: 1200px;
@@ -31,37 +29,25 @@
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+.carouselWrapper {
+    width: 100%;
+}
 .carouselTrack {
     display: flex;
     gap: 20px;
     overflow-x: auto;
     padding: 20px 10px;
     scroll-snap-type: x mandatory;
-    scrollbar-width: thin; 
-    scrollbar-color: var(--charmander-red) rgba(255, 255, 255, 0.1);
+    scrollbar-width: none; 
 }
 .carouselTrack::-webkit-scrollbar {
-    height: 8px;
+    display: none;
 }
-.carouselTrack::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-}
-.carouselTrack::-webkit-scrollbar-thumb {
-    background: var(--charmander-red);
-    border-radius: 10px;
-}
-
-/* Solo le decimos a la tarjeta cómo comportarse DENTRO del carrusel */
 .carouselTrack .pokemonCard {
     min-width: 280px; 
     flex-shrink: 0;   
     scroll-snap-align: center; 
 }
-
-/* =========================================
-   CAROUSEL ERROR STATE
-========================================= */
 .carouselErrorBox {
     width: 100%;
     padding: 40px 20px;
@@ -80,6 +66,122 @@
     margin: 0;
     letter-spacing: 1px;
 }
+/*WEATHER SECTION*/
+.weatherSection {
+    padding: var(--spacing-md, 20px);
+    max-width: 600px;
+    margin: 40px auto;
+}
+.weatherContainer {
+    background-color: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.weatherStatusText {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--clean-font);
+    font-size: 1.1rem;
+    margin: 20px 0;
+    animation: pulse 1.5s infinite;
+}
+.weatherErrorText {
+    color: var(--charmander-red);
+    text-align: center;
+    font-family: var(--clean-font);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+/*initial button*/
+.weatherPrompt {
+    text-align: center;
+    color: var(--white);
+    font-family: var(--clean-font);
+}
+.weatherPrompt p {
+    margin-bottom: 20px;
+}
+.pillBtn {
+    background-color: var(--pikachu-yellow);
+    color: var(--black);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform var(--transition-fast, 0.3s);
+}
+.pillBtn:hover {
+    transform: translateY(-3px);
+}
+/*currently weather*/
+.currentWeatherBox {
+    text-align: center;
+    color: var(--white);
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+.weatherCity {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    color: var(--pikachu-yellow);
+    letter-spacing: 1px;
+}
+.weatherMainRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.currentTemp {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.weatherDesc {
+    text-transform: capitalize;
+    margin: 5px 0 0 0;
+    color: var(--gray-medium);
+}
+/*Forecast for next three days*/
+.forecastTrack {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+.forecastCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: var(--radius-md);
+    min-width: 80px;
+}
+.forecastDay {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+.forecastTemp {
+    color: var(--pikachu-yellow);
+    font-weight: bold;
+    margin-top: 5px;
+}
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
 /*DESKTOP HERO*/
 @media screen and (min-width: 1025px) {
     .heroBanner { 
@@ -87,5 +189,22 @@
     }
     .heroTitle { 
         font-size: var(--spacing-xl);
+    }
+    .carouselTrack {
+        scrollbar-width: thin; 
+        scrollbar-color: var(--charmander-red) rgba(255, 255, 255, 0.1);
+        padding-bottom: 30px;
+    }
+    .carouselTrack::-webkit-scrollbar {
+        display: block; 
+        height: 10px;
+    }
+    .carouselTrack::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+    }
+    .carouselTrack::-webkit-scrollbar-thumb {
+        background: var(--charmander-red);
+        border-radius: 10px;
     }
 }
