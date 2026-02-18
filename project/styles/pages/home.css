@@ -23,7 +23,7 @@
 }
 .featuredTitle {
     text-align: center;
-    color: var(--pikachu-yellow);
+    color: var(--charmander-red);
     font-family: var(--clean-font);
     font-size: 2rem;
     margin-bottom: 20px;
@@ -75,6 +75,7 @@
 }
 .weatherContainer {
     background-color: rgba(30, 30, 30, 0.6);
+    color: var(--white);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-lg);
     padding: 30px 20px;
